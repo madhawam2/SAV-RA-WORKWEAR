@@ -1,0 +1,2328 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>SAVÉRA Workwear</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  /* Layout: sticky editorial storefront on a calm beige/cream ground. Sage is the single accent. */
+  :root {
+    --beige: #E9E2D6; --cream: #F7F5F0; --white: #FFFFFF; --sage: #A3B09E; --sage-deep: #66745F;
+    --charcoal: #292925; --gray: #E8E8E5; --muted: #6B6A62; --line: #D9D5CB;
+    --f-display: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+    --f-sans: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    color-scheme: light;
+  }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { background: var(--cream); color: var(--charcoal); font-family: var(--f-sans); font-size: 15px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 90; background: var(--cream); }
+  .wrap { width: 100%; max-width: 1360px; margin-inline: auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+  .sticky-top { position: sticky; top: env(safe-area-inset-top, 0px); }
+  .eyebrow { font-size: 11.5px; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
+  em { font-style: italic; }
+  a, button { -webkit-tap-highlight-color: transparent; }
+  :focus-visible { outline: 2px solid var(--charcoal); outline-offset: 3px; }
+  details > summary::-webkit-details-marker { display: none; }
+  .no-scrollbar { scrollbar-width: none; } .no-scrollbar::-webkit-scrollbar { display: none; }
+
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 50px; padding: 0 28px; border-radius: 6px; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; border: 1px solid transparent; cursor: pointer; white-space: nowrap; text-align: center; transition: background-color .35s, color .35s, border-color .35s, transform .25s; }
+  .btn:active { transform: scale(.985); }
+  .btn[disabled] { opacity: .5; cursor: wait; }
+  .btn-dark { background: var(--charcoal); color: var(--cream); }
+  .btn-dark:hover { background: var(--sage-deep); }
+  .btn-light { background: var(--white); color: var(--charcoal); }
+  .btn-light:hover { background: var(--charcoal); color: var(--cream); }
+  .btn-line { border-color: var(--charcoal); color: var(--charcoal); }
+  .btn-line:hover { background: var(--charcoal); color: var(--cream); }
+
+  .link-u { background-image: linear-gradient(currentColor, currentColor); background-size: 0 1px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .4s cubic-bezier(.2,.7,.2,1); }
+  .link-u:hover, .link-u.on { background-size: 100% 1px; }
+
+  .chip { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; min-width: 46px; padding: 0 16px; border: 1px solid var(--line); border-radius: 999px; font-size: 13px; background: transparent; color: var(--charcoal); cursor: pointer; transition: background-color .25s, color .25s, border-color .25s; }
+  .chip:hover:not(.on):not([disabled]) { border-color: var(--charcoal); }
+  .chip.on { background: var(--charcoal); color: var(--cream); border-color: var(--charcoal); }
+  .chip[disabled] { opacity: .35; text-decoration: line-through; cursor: not-allowed; }
+
+  .swb { padding: 4px; border-radius: 50%; cursor: pointer; line-height: 0; }
+  .sw { display: block; border-radius: 50%; border: 1px solid rgba(41,41,37,.28); transition: box-shadow .25s; }
+  .sw.on { box-shadow: 0 0 0 2px var(--cream), 0 0 0 3.5px var(--charcoal); }
+
+  .field { width: 100%; height: 50px; border: 1px solid var(--line); background: var(--white); border-radius: 6px; padding: 0 14px; font: inherit; font-size: 15px; color: var(--charcoal); transition: border-color .2s; }
+  .field:focus { outline: 2px solid var(--charcoal); outline-offset: 1px; border-color: var(--charcoal); }
+  .field.err { border-color: #B4493C; }
+  .field-sm { height: 40px; font-size: 13.5px; }
+  select.field { appearance: none; -webkit-appearance: none; padding-right: 38px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23292925' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; }
+  textarea.field { height: auto; padding-top: 12px; padding-bottom: 12px; }
+  input::placeholder, textarea::placeholder { color: #9A988E; }
+
+  .zoom { overflow: hidden; }
+  .zt { transition: transform 1.1s cubic-bezier(.2,.7,.2,1); will-change: transform; }
+  .zoom:hover .zt { transform: scale(1.055); }
+
+  @keyframes pageIn { from { opacity: 0; } to { opacity: 1; } }
+  .page { animation: pageIn .6s ease both; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .fade { animation: fadeIn .4s ease both; }
+  @keyframes popIn { from { opacity: 0; transform: translateY(14px) scale(.985); } to { opacity: 1; transform: none; } }
+  .pop { animation: popIn .45s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes shake { 0%,100% { transform: none; } 20% { transform: translateX(-6px); } 40% { transform: translateX(6px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(4px); } }
+  .shake { animation: shake .45s ease; }
+  .reveal { opacity: .55; transform: translateY(16px); transition: opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  .splash { min-height: 100vh; display: grid; place-items: center; font-family: var(--f-display); font-size: 2.4rem; letter-spacing: .24em; background: var(--cream); color: var(--charcoal); }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: { beige: '#E9E2D6', cream: '#F7F5F0', sage: '#A3B09E', sagedeep: '#66745F', charcoal: '#292925', softgray: '#E8E8E5', gray: '#E8E8E5', line: '#D9D5CB', muted: '#6B6A62' },
+      fontFamily: { display: ['"Instrument Serif"', 'Georgia', 'serif'], sans: ['"Hanken Grotesk"', 'system-ui', 'sans-serif'] }
+    } }
+  };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/lucide-react@0.263.1/dist/umd/lucide-react.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.24.7/babel.min.js"></script>
+
+<div id="root"><div class="splash">SAVÉRA</div></div>
+
+<script type="text/plain" id="app-src">
+// =====================================================================
+//  SAVÉRA WORKWEAR — storefront
+//  Everything a store owner will want to change lives in the CONFIG,
+//  PRODUCTS, LOOKS and REVIEWS blocks near the top of this file.
+// =====================================================================
+
+const { useState, useEffect, useMemo, useRef, useCallback, createContext, useContext } = React;
+
+// ---------------------------------------------------------------------
+//  1. CONFIG  (rename the brand, change the WhatsApp number, delivery…)
+// ---------------------------------------------------------------------
+const CONFIG = {
+  brand: {
+    name: "SAVÉRA WORKWEAR",
+    short: "SAVÉRA",
+    tagline: "Confidence in Every Workday.",
+    description:
+      "Thoughtfully designed workwear for women who move with confidence. Minimal, comfortable and made for the way you work in Sri Lanka.",
+  },
+  announcement: "Free delivery on orders over Rs. 10,000 | Islandwide delivery",
+  freeDeliveryOver: 10000,
+  deliveryFee: 450,
+  // WhatsApp business number: country code + number, digits only (no + or spaces)
+  whatsappNumber: "94770000000",
+  contact: {
+    email: "hello@saveraworkwear.lk",
+    phone: "+94 77 000 0000",
+    address: "No. 00, Galle Road, Colombo 03, Sri Lanka",
+    hours: "Mon – Sat, 9.00 am – 6.00 pm",
+  },
+  social: {
+    instagram: "https://instagram.com/saveraworkwear",
+    facebook: "https://facebook.com/saveraworkwear",
+    tiktok: "https://tiktok.com/@saveraworkwear",
+  },
+  bank: {
+    bank: "Sample Bank PLC",
+    accountName: "Savéra Workwear (Pvt) Ltd",
+    accountNumber: "0000 0000 0000",
+    branch: "Colombo 03",
+  },
+};
+
+// ---------------------------------------------------------------------
+//  2. TYPES
+// ---------------------------------------------------------------------
+type Size = "XS" | "S" | "M" | "L" | "XL";
+type Kind = "shirt" | "blouse" | "trousers" | "wide" | "dress" | "blazer" | "tank" | "vest";
+type Category = "Blouses" | "Shirts" | "Trousers" | "Dresses" | "Office Essentials";
+
+interface Product {
+  id: string;
+  name: string;
+  price: number;
+  category: Category;
+  kind: Kind;
+  colors: string[];
+  sizes: Size[];
+  isNew: boolean;
+  best: boolean;
+  tone: number;
+  added: number; // higher = newer
+  description: string;
+  fabric: string;
+  details: string[];
+  image?: string; // optional: paste a photo URL or data URI to replace the illustration
+}
+
+interface CartLine { id: string; color: string; size: Size; qty: number }
+interface Customer {
+  name: string; phone: string; email: string; address: string;
+  city: string; district: string; postal: string; notes: string; payment: "cod" | "bank";
+}
+
+const ALL_SIZES: Size[] = ["XS", "S", "M", "L", "XL"];
+
+// ---------------------------------------------------------------------
+//  3. PRODUCTS  (sample data — edit freely)
+// ---------------------------------------------------------------------
+const MODEL_INFO = "Our model is 5'8\" (173 cm) with a 33\" bust, 25\" waist and 35\" hips, and wears size S.";
+
+const PRODUCTS: Product[] = [
+  {
+    id: "everyday-linen-shirt", name: "The Everyday Linen Shirt", price: 3490, category: "Shirts", kind: "shirt",
+    colors: ["Ivory", "Sage", "Sand"], sizes: ["XS", "S", "M", "L", "XL"], isNew: true, best: true, tone: 0, added: 13,
+    description: "A relaxed, breathable shirt in a soft linen blend. Wear it tucked into tailored trousers for the office or open over a tank on a casual Friday.",
+    fabric: "55% linen, 45% viscose. Pre-washed for softness. Machine wash cool, iron while slightly damp.",
+    details: ["Relaxed fit with a softly dropped shoulder", "Mother-of-pearl effect buttons", "Curved hem that works tucked or untucked", "Light enough for Colombo humidity"],
+  },
+  {
+    id: "soft-tailored-trousers", name: "Soft Tailored Trousers", price: 3990, category: "Trousers", kind: "trousers",
+    colors: ["Charcoal", "Sand", "Sage"], sizes: ["XS", "S", "M", "L", "XL"], isNew: true, best: false, tone: 2, added: 12,
+    description: "Sharp in line, easy in feel. A high-rise trouser with a hidden stretch waistband that stays comfortable from the first meeting to the last.",
+    fabric: "68% polyester, 28% viscose, 4% elastane. Wrinkle-resistant. Machine wash cold.",
+    details: ["High rise with a flat, stretch-back waistband", "Front pleat for a clean drape", "Side pockets that sit flat", "Full length with a straight hem"],
+  },
+  {
+    id: "modern-workday-blouse", name: "Modern Workday Blouse", price: 2990, category: "Blouses", kind: "blouse",
+    colors: ["Ivory", "Blush", "Sage"], sizes: ["XS", "S", "M", "L"], isNew: true, best: false, tone: 1, added: 11,
+    description: "A fluid V-neck blouse with a gentle gather at the hem. Light, quiet and easy to pair with almost anything in your wardrobe.",
+    fabric: "100% recycled polyester crepe. Soft matte finish. Machine wash cold, hang to dry.",
+    details: ["Relaxed V-neckline", "Short sleeve with a clean edge", "Slightly curved, longer back hem", "Does not cling in warm weather"],
+  },
+  {
+    id: "minimal-midi-dress", name: "The Minimal Midi Dress", price: 4490, category: "Dresses", kind: "dress",
+    colors: ["Sage", "Charcoal", "Oat"], sizes: ["XS", "S", "M", "L", "XL"], isNew: true, best: false, tone: 3, added: 10,
+    description: "One piece, no styling required. A softly structured midi with a defined waist and a skirt that moves well when you walk.",
+    fabric: "70% viscose, 30% polyester. Lined bodice. Machine wash gentle, cool iron.",
+    details: ["Defined waist seam", "Hidden side zip", "Hits mid-calf on a 5'6\" frame", "Pockets in the side seams"],
+  },
+  {
+    id: "sage-comfort-shirt", name: "Sage Comfort Shirt", price: 3490, category: "Shirts", kind: "shirt",
+    colors: ["Sage", "Ivory", "Stone"], sizes: ["XS", "S", "M", "L", "XL"], isNew: true, best: false, tone: 1, added: 9,
+    description: "Our softest everyday shirt, with a little stretch for long days at a desk and short commutes in between.",
+    fabric: "97% cotton poplin, 3% elastane. Machine wash 30°C, medium iron.",
+    details: ["Classic point collar", "Soft stretch for easy movement", "Regular fit, slightly cropped length", "Chest-level seam detail"],
+  },
+  {
+    id: "essential-straight-pants", name: "Essential Straight Pants", price: 3790, category: "Trousers", kind: "trousers",
+    colors: ["Stone", "Black", "Mocha"], sizes: ["XS", "S", "M", "L", "XL"], isNew: true, best: false, tone: 0, added: 8,
+    description: "A clean straight leg in a fabric that holds its shape. The trouser you will reach for the most.",
+    fabric: "72% polyester, 25% viscose, 3% elastane. Crease-resistant. Machine wash cold.",
+    details: ["Mid-to-high rise", "Straight leg with a slight break", "Zip fly with a hook closure", "Belt loops and two back pockets"],
+  },
+  {
+    id: "classic-wrap-blouse", name: "Classic Wrap Blouse", price: 3290, category: "Blouses", kind: "blouse",
+    colors: ["Ivory", "Blush", "Charcoal"], sizes: ["XS", "S", "M", "L", "XL"], isNew: false, best: true, tone: 2, added: 7,
+    description: "A flattering wrap front that works for every body, with enough coverage to feel polished and enough softness to feel easy.",
+    fabric: "100% viscose. Fluid drape. Hand wash or gentle machine wash.",
+    details: ["Wrap front with an inner tie", "Three-quarter sleeve", "Gently curved hem", "Opaque, even in Ivory"],
+  },
+  {
+    id: "pleated-wide-leg-trousers", name: "Pleated Wide-Leg Trousers", price: 4290, category: "Trousers", kind: "wide",
+    colors: ["Sand", "Charcoal", "Black"], sizes: ["XS", "S", "M", "L", "XL"], isNew: false, best: true, tone: 3, added: 6,
+    description: "A generous leg with deep pleats that fall straight. Comfortable, cool and quietly dramatic.",
+    fabric: "65% polyester, 30% viscose, 5% elastane. Machine wash cold.",
+    details: ["High waist with double pleats", "Wide leg, full length", "Side and back pockets", "Cool to wear in warm weather"],
+  },
+  {
+    id: "sleeveless-shift-dress", name: "Sleeveless Shift Dress", price: 4190, category: "Dresses", kind: "dress",
+    colors: ["Charcoal", "Sage", "Oat"], sizes: ["XS", "S", "M", "L", "XL"], isNew: false, best: true, tone: 1, added: 5,
+    description: "A clean-lined shift that layers under a blazer in the office and stands alone on weekends.",
+    fabric: "75% polyester, 20% viscose, 5% elastane. Fully lined. Machine wash cold.",
+    details: ["Round neckline", "Armholes cut to sit comfortably", "Knee-grazing midi length", "Back zip"],
+  },
+  {
+    id: "relaxed-everyday-blazer", name: "Relaxed Everyday Blazer", price: 5990, category: "Office Essentials", kind: "blazer",
+    colors: ["Oat", "Black", "Sage"], sizes: ["XS", "S", "M", "L", "XL"], isNew: false, best: true, tone: 2, added: 4,
+    description: "The blazer that makes everything else look considered. Unstructured shoulders, a clean lapel, and a fabric that does not wrinkle in your bag.",
+    fabric: "70% polyester, 27% viscose, 3% elastane. Lined. Dry clean or gentle machine wash.",
+    details: ["Single-button closure", "Soft, lightly padded shoulder", "Two front pockets", "Sits at the hip"],
+  },
+  {
+    id: "fine-knit-tank", name: "Fine-Knit Tank", price: 1990, category: "Office Essentials", kind: "tank",
+    colors: ["Ivory", "Black", "Mocha"], sizes: ["XS", "S", "M", "L", "XL"], isNew: false, best: true, tone: 0, added: 3,
+    description: "A smooth, fine-gauge tank that layers under shirts and blazers without bulk. Easy to wear on its own too.",
+    fabric: "60% cotton, 35% nylon, 5% elastane. Soft stretch knit. Machine wash cold.",
+    details: ["Scoop neckline", "Slim fit, hip length", "Seamless side panels", "Does not roll at the hem"],
+  },
+  {
+    id: "tailored-waistcoat", name: "Tailored Waistcoat", price: 3590, category: "Office Essentials", kind: "vest",
+    colors: ["Charcoal", "Stone", "Oat"], sizes: ["XS", "S", "M", "L"], isNew: false, best: false, tone: 3, added: 2,
+    description: "A modern waistcoat with a fitted shape and a soft finish. Wear it over a shirt or on its own with straight trousers.",
+    fabric: "70% polyester, 27% viscose, 3% elastane. Lined. Dry clean recommended.",
+    details: ["V-neck with five-button front", "Adjustable back strap", "Slim fit", "Hip length"],
+  },
+  {
+    id: "wrap-midi-dress", name: "The Wrap Midi Dress", price: 4790, category: "Dresses", kind: "dress",
+    colors: ["Mocha", "Sage", "Black"], sizes: ["XS", "S", "M", "L", "XL"], isNew: false, best: false, tone: 0, added: 1,
+    description: "A softly draped wrap dress that adjusts at the waist, so it fits well on the days you want it close and the days you do not.",
+    fabric: "100% viscose twill. Fluid drape. Machine wash gentle.",
+    details: ["Adjustable internal tie and outer wrap", "Elbow-length sleeves", "Midi length", "Easy to dress up with a blazer"],
+  },
+];
+
+const CATEGORIES: { id: string; label: string; route: string; match: Category | null }[] = [
+  { id: "all", label: "All Products", route: "shop", match: null },
+  { id: "blouses", label: "Blouses", route: "shop-blouses", match: "Blouses" },
+  { id: "shirts", label: "Shirts", route: "shop-shirts", match: "Shirts" },
+  { id: "trousers", label: "Trousers", route: "shop-trousers", match: "Trousers" },
+  { id: "dresses", label: "Dresses", route: "shop-dresses", match: "Dresses" },
+  { id: "essentials", label: "Office Essentials", route: "office-essentials", match: "Office Essentials" },
+];
+
+// ---------------------------------------------------------------------
+//  4. LOOKS & REVIEWS  (sample content — edit freely)
+// ---------------------------------------------------------------------
+const LOOKS = [
+  {
+    id: "monday-minimal", name: "Monday Minimal", tone: 0,
+    blurb: "A sharp, quiet start to the week. Structured layers in a calm, neutral palette.",
+    pieces: [{ pid: "relaxed-everyday-blazer", color: "Oat" }, { pid: "soft-tailored-trousers", color: "Charcoal" }],
+  },
+  {
+    id: "soft-neutral-days", name: "Soft Neutral Days", tone: 1,
+    blurb: "Fluid fabrics and a tonal palette for the days that are all about focus.",
+    pieces: [{ pid: "modern-workday-blouse", color: "Ivory" }, { pid: "pleated-wide-leg-trousers", color: "Sand" }],
+  },
+  {
+    id: "friday-effortless", name: "Friday Effortless", tone: 3,
+    blurb: "Relaxed enough for the end of the week, polished enough for a late meeting.",
+    pieces: [{ pid: "everyday-linen-shirt", color: "Sage" }, { pid: "essential-straight-pants", color: "Stone" }],
+  },
+];
+
+// Sample reviews: replace with real customer reviews before launch.
+const REVIEWS = [
+  { name: "Dilini P.", stars: 5, product: "The Everyday Linen Shirt", text: "Finally workwear that gets through a full day in the Colombo heat. The linen is soft and the shirt still looks sharp at five o'clock." },
+  { name: "Sanduni R.", stars: 5, product: "Soft Tailored Trousers", text: "The fit through the hip is perfect and the waistband is genuinely comfortable. I have already ordered a second pair in Sage." },
+  { name: "Nimaya F.", stars: 4, product: "Modern Workday Blouse", text: "Lovely fabric and fast delivery to Kandy. I sized up for a looser fit and it was exactly what I wanted." },
+];
+
+const DISTRICTS = [
+  "Ampara","Anuradhapura","Badulla","Batticaloa","Colombo","Galle","Gampaha","Hambantota","Jaffna","Kalutara",
+  "Kandy","Kegalle","Kilinochchi","Kurunegala","Mannar","Matale","Matara","Monaragala","Mullaitivu","Nuwara Eliya",
+  "Polonnaruwa","Puttalam","Ratnapura","Trincomalee","Vavuniya",
+];
+
+const SIZE_CHART: { size: Size; bust: string; waist: string; hip: string }[] = [
+  { size: "XS", bust: "80", waist: "62", hip: "88" },
+  { size: "S", bust: "84", waist: "66", hip: "92" },
+  { size: "M", bust: "88", waist: "70", hip: "96" },
+  { size: "L", bust: "94", waist: "76", hip: "102" },
+  { size: "XL", bust: "100", waist: "82", hip: "108" },
+];
+
+// ---------------------------------------------------------------------
+//  5. HELPERS
+// ---------------------------------------------------------------------
+const SWATCH: Record<string, string> = {
+  Ivory: "#F1ECE2", Sand: "#D9CBB4", Sage: "#A3B09E", Charcoal: "#3B3B36", Oat: "#E4DAC8",
+  Mocha: "#8C7765", Stone: "#C8C4B9", Black: "#242421", Blush: "#DDC4BC",
+};
+
+const fmt = (n: number) => "Rs. " + Math.round(n).toLocaleString("en-US");
+const byId = (id: string) => PRODUCTS.find((p) => p.id === id);
+const deliveryFor = (subtotal: number) => (subtotal === 0 || subtotal >= CONFIG.freeDeliveryOver ? 0 : CONFIG.deliveryFee);
+const lineKey = (l: { id: string; color: string; size: string }) => l.id + "|" + l.color + "|" + l.size;
+
+function load<T>(key: string, fallback: T): T {
+  try {
+    const v = localStorage.getItem(key);
+    return v ? (JSON.parse(v) as T) : fallback;
+  } catch (e) { return fallback; }
+}
+function save(key: string, value: any) {
+  try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) { /* storage unavailable */ }
+}
+
+function hexToRgb(h: string) {
+  const n = parseInt(h.slice(1), 16);
+  return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+}
+function mix(a: string, b: string, t: number) {
+  const A = hexToRgb(a), B = hexToRgb(b);
+  const c = A.map((v, i) => Math.round(v + (B[i] - v) * t));
+  return "rgb(" + c[0] + "," + c[1] + "," + c[2] + ")";
+}
+function isDark(hex: string) {
+  const [r, g, b] = hexToRgb(hex);
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b < 110;
+}
+
+function searchProducts(q: string): Product[] {
+  const t = q.trim().toLowerCase();
+  if (!t) return PRODUCTS;
+  const words = t.split(/\s+/);
+  return PRODUCTS.filter((p) => {
+    const hay = (p.name + " " + p.category + " " + p.colors.join(" ") + " " + p.kind + " " + p.description).toLowerCase();
+    return words.every((w) => hay.includes(w));
+  });
+}
+
+// WhatsApp ordering ----------------------------------------------------
+function buildWhatsAppMessage(lines: CartLine[], c: Partial<Customer>, subtotal: number, delivery: number) {
+  const out: string[] = [];
+  out.push("Hello " + CONFIG.brand.short + "! I would like to place an order.");
+  out.push("");
+  out.push("*Customer*");
+  out.push("Name: " + (c.name || "(please add your name)"));
+  if (c.phone) out.push("Phone: " + c.phone);
+  out.push("");
+  out.push("*Order*");
+  lines.forEach((l, i) => {
+    const p = byId(l.id);
+    if (!p) return;
+    out.push((i + 1) + ". " + p.name + " | Size " + l.size + " | " + l.color + " | Qty " + l.qty + " | " + fmt(p.price * l.qty));
+  });
+  out.push("");
+  out.push("Subtotal: " + fmt(subtotal));
+  out.push("Delivery: " + (delivery === 0 ? "Free" : fmt(delivery)));
+  out.push("*Total: " + fmt(subtotal + delivery) + "*");
+  out.push("");
+  out.push("*Delivery details*");
+  const addr = [c.address, c.city, c.district, c.postal].filter(Boolean).join(", ");
+  out.push(addr || "(address to be confirmed)");
+  if (c.payment) out.push("Payment: " + (c.payment === "bank" ? "Bank transfer" : "Cash on delivery"));
+  if (c.notes) out.push("Notes: " + c.notes);
+  return out.join("\n");
+}
+const waLink = (msg: string) => "https://wa.me/" + CONFIG.whatsappNumber + "?text=" + encodeURIComponent(msg);
+
+// Payment gateway adapter ---------------------------------------------
+// Demo only: no payment is taken. To go live, replace createOrder with a call to
+// your gateway (for example PayHere, Stripe, or Genie) and redirect to its hosted page.
+const PaymentGateway = {
+  async createOrder(order: any): Promise<{ orderId: string; status: string }> {
+    await new Promise((r) => setTimeout(r, 700));
+    return { orderId: "EW-" + Date.now().toString(36).toUpperCase().slice(-6), status: order.payment === "cod" ? "confirmed-cod" : "awaiting-transfer" };
+  },
+};
+
+// ---------------------------------------------------------------------
+//  6. ICONS (lucide)
+// ---------------------------------------------------------------------
+const LUCIDE: any = (window as any).LucideReact || {};
+// Inline copies of the core Lucide paths, used only if the icon library fails to load.
+const FALLBACK_ICONS: Record<string, string[]> = {
+  Search: ["M21 21l-4.3-4.3", "M19 11a8 8 0 1 1-16 0a8 8 0 0 1 16 0z"],
+  Menu: ["M4 12h16", "M4 6h16", "M4 18h16"],
+  X: ["M18 6L6 18", "M6 6l12 12"],
+  Plus: ["M5 12h14", "M12 5v14"],
+  Minus: ["M5 12h14"],
+  ChevronRight: ["M9 18l6-6-6-6"],
+  ChevronLeft: ["M15 18l-6-6 6-6"],
+  ChevronDown: ["M6 9l6 6 6-6"],
+  ArrowRight: ["M5 12h14", "M12 5l7 7-7 7"],
+  Check: ["M20 6L9 17l-5-5"],
+  Heart: ["M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"],
+  ShoppingBag: ["M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z", "M3 6h18", "M16 10a4 4 0 0 1-8 0"],
+  User: ["M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2", "M16 7a4 4 0 1 1-8 0a4 4 0 0 1 8 0z"],
+  Trash2: ["M3 6h18", "M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6", "M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2", "M10 11v6", "M14 11v6"],
+  Eye: ["M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z", "M15 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0z"],
+  SlidersHorizontal: ["M21 4h-7", "M10 4H3", "M21 12h-9", "M8 12H3", "M21 20h-5", "M12 20H3", "M14 2v4", "M8 10v4", "M16 18v4"],
+};
+
+function Icon({ name, size = 20, className = "", sw = 1.5 }: { name: string; size?: number; className?: string; sw?: number }) {
+  const C = LUCIDE[name];
+  if (C) return <C size={size} strokeWidth={sw} className={className} aria-hidden="true" />;
+  const paths = FALLBACK_ICONS[name];
+  if (!paths) return <span style={{ display: "inline-block", width: size, height: size }} />;
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      {paths.map((d, i) => <path key={i} d={d} />)}
+    </svg>
+  );
+}
+
+// ---------------------------------------------------------------------
+//  7. GARMENT ILLUSTRATIONS (stand-ins for product photography)
+//     Give a product an `image` URL and it will be used instead.
+// ---------------------------------------------------------------------
+const TONES = [["#F0EBE1", "#E3DACA"], ["#EAEDE6", "#D9DFD3"], ["#EEECE7", "#DEDAD1"], ["#E8E2D5", "#D8CFBD"]];
+const BOTTOMS = ["trousers", "wide"];
+
+function GarmentShape({ kind, color, front = true }: { kind: Kind; color: string; front?: boolean }) {
+  const base = SWATCH[color] || "#D9CBB4";
+  const dark = isDark(base);
+  const hi = mix(base, "#FFFFFF", dark ? 0.16 : 0.3);
+  const deep = mix(base, "#000000", 0.2);
+  const line = mix(base, "#000000", 0.3);
+  const btn = mix(base, dark ? "#FFFFFF" : "#000000", 0.5);
+  const sw: any = { stroke: line, strokeWidth: 1.1, strokeLinejoin: "round", strokeLinecap: "round" };
+  const seam: any = { stroke: line, strokeWidth: 0.9, strokeOpacity: 0.55, fill: "none", strokeLinecap: "round" };
+
+  switch (kind) {
+    case "shirt":
+      return (
+        <g>
+          <path d="M118 84 L150 96 L182 84 L236 108 L262 232 L236 240 L214 150 L212 338 L88 338 L86 150 L64 240 L38 232 L64 108 Z" fill={base} {...sw} />
+          <path d="M64 108 L86 150 M236 108 L214 150" {...seam} />
+          <path d="M43 220 L67 228 M257 220 L233 228" {...seam} />
+          {front ? (
+            <g>
+              <path d="M114 82 L150 98 L138 128 L104 100 Z" fill={hi} {...sw} />
+              <path d="M186 82 L150 98 L162 128 L196 100 Z" fill={hi} {...sw} />
+              <path d="M150 98 L150 338" {...seam} />
+              {[140, 182, 224, 266, 308].map((y) => <circle key={y} cx="150" cy={y} r="2.6" fill={btn} />)}
+              <path d="M170 160 L194 160 L194 184 L170 184 Z" {...seam} />
+            </g>
+          ) : (
+            <g>
+              <path d="M118 84 Q150 100 182 84" {...seam} />
+              <path d="M90 120 Q150 138 210 120" {...seam} />
+              <path d="M150 138 L150 338" {...seam} />
+            </g>
+          )}
+        </g>
+      );
+    case "blouse":
+      return (
+        <g>
+          <path d="M112 86 Q150 126 188 86 L238 108 L250 164 L214 160 L218 322 Q150 336 82 322 L86 160 L50 164 L62 108 Z" fill={base} {...sw} />
+          {front ? (
+            <g>
+              <path d="M112 86 Q150 126 188 86 Q150 104 112 86 Z" fill={deep} fillOpacity="0.35" {...sw} />
+              <path d="M98 214 Q150 228 202 214" {...seam} />
+              <path d="M104 196 Q150 208 196 196" {...seam} />
+            </g>
+          ) : (
+            <g>
+              <path d="M112 86 Q150 100 188 86" {...seam} />
+              <path d="M150 100 L150 326" {...seam} />
+            </g>
+          )}
+          <path d="M62 108 L86 160 M238 108 L214 160" {...seam} />
+        </g>
+      );
+    case "trousers":
+      return (
+        <g>
+          <path d="M104 82 L196 82 L208 150 L211 344 L158 344 L152 176 L148 176 L142 344 L89 344 L92 150 Z" fill={base} {...sw} />
+          <path d="M104 82 L196 82 L197 98 L103 98 Z" fill={deep} fillOpacity="0.28" {...sw} />
+          {front ? (
+            <g>
+              <path d="M150 98 L150 176" {...seam} />
+              <path d="M124 98 L121 160 M176 98 L179 160" {...seam} />
+              <path d="M104 108 Q120 124 114 148 M196 108 Q180 124 186 148" {...seam} />
+              <circle cx="150" cy="104" r="2.6" fill={btn} />
+            </g>
+          ) : (
+            <g>
+              <path d="M150 98 L150 176" {...seam} />
+              <path d="M112 126 L136 126 M164 126 L188 126" {...seam} />
+            </g>
+          )}
+          <path d="M101 330 L150 330 M150 330 L199 330" {...seam} />
+        </g>
+      );
+    case "wide":
+      return (
+        <g>
+          <path d="M100 82 L200 82 L218 150 L242 346 L160 346 L151 180 L149 180 L140 346 L58 346 L82 150 Z" fill={base} {...sw} />
+          <path d="M100 82 L200 82 L201 98 L99 98 Z" fill={deep} fillOpacity="0.28" {...sw} />
+          {front ? (
+            <g>
+              <path d="M128 98 L116 330 M172 98 L184 330" {...seam} />
+              <path d="M150 98 L150 180" {...seam} />
+              <path d="M100 108 Q116 124 110 150 M200 108 Q184 124 190 150" {...seam} />
+              <circle cx="150" cy="104" r="2.6" fill={btn} />
+            </g>
+          ) : (
+            <g>
+              <path d="M150 98 L150 180" {...seam} />
+              <path d="M112 126 L136 126 M164 126 L188 126" {...seam} />
+            </g>
+          )}
+        </g>
+      );
+    case "dress":
+      return (
+        <g>
+          <path d="M122 80 L138 80 Q150 108 162 80 L178 80 L184 150 L218 346 L82 346 L116 150 Z" fill={base} {...sw} />
+          <path d="M116 150 L184 150 L186 168 L114 168 Z" fill={deep} fillOpacity="0.28" {...sw} />
+          {front ? (
+            <g>
+              <path d="M150 168 L150 346 M130 172 L112 346 M170 172 L188 346" {...seam} />
+              <path d="M122 80 Q150 124 178 80" {...seam} />
+            </g>
+          ) : (
+            <g>
+              <path d="M150 90 L150 346" {...seam} />
+              <path d="M126 88 Q150 100 174 88" {...seam} />
+            </g>
+          )}
+        </g>
+      );
+    case "blazer":
+      return (
+        <g>
+          <path d="M116 84 L150 92 L184 84 L240 110 L266 272 L234 280 L214 160 L214 318 L86 318 L86 160 L66 280 L34 272 L60 110 Z" fill={base} {...sw} />
+          <path d="M60 110 L86 160 M240 110 L214 160" {...seam} />
+          {front ? (
+            <g>
+              <path d="M116 84 L150 96 L146 210 L110 142 L128 128 Z" fill={hi} {...sw} />
+              <path d="M184 84 L150 96 L154 210 L190 142 L172 128 Z" fill={hi} {...sw} />
+              <path d="M150 96 L150 318" {...seam} />
+              <circle cx="150" cy="226" r="3.2" fill={btn} />
+              <path d="M102 262 L136 262 M164 262 L198 262" {...seam} />
+            </g>
+          ) : (
+            <g>
+              <path d="M116 84 Q150 100 184 84" {...seam} />
+              <path d="M150 100 L150 318" {...seam} />
+            </g>
+          )}
+        </g>
+      );
+    case "tank":
+      return (
+        <g>
+          <path d="M124 84 L138 84 Q150 124 162 84 L176 84 L188 140 L202 322 Q150 336 98 322 L112 140 Z" fill={base} {...sw} />
+          {front ? <path d="M138 84 Q150 124 162 84" {...seam} /> : <path d="M138 84 Q150 98 162 84" {...seam} />}
+          <path d="M112 140 Q150 150 188 140" {...seam} />
+        </g>
+      );
+    case "vest":
+      return (
+        <g>
+          <path d="M120 84 L142 84 L150 112 L158 84 L180 84 L192 150 L198 302 L150 326 L102 302 L108 150 Z" fill={base} {...sw} />
+          {front ? (
+            <g>
+              <path d="M142 84 L150 112 L158 84" {...seam} />
+              <path d="M150 112 L150 326" {...seam} />
+              {[142, 178, 214, 250, 286].map((y) => <circle key={y} cx="150" cy={y} r="2.6" fill={btn} />)}
+              <path d="M118 262 L136 262 M164 262 L182 262" {...seam} />
+            </g>
+          ) : (
+            <g>
+              <path d="M120 84 Q150 98 180 84" {...seam} />
+              <path d="M110 250 L190 250" {...seam} />
+              <path d="M150 98 L150 326" {...seam} />
+            </g>
+          )}
+        </g>
+      );
+    default:
+      return null;
+  }
+}
+
+function Hanger() {
+  return (
+    <g fill="none" stroke="#8D897C" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M150 64 L150 52 C150 44 160 44 160 36 C160 28 151 26 148 31" />
+      <path d="M150 64 L98 94 M150 64 L202 94" />
+    </g>
+  );
+}
+
+const DROP = { filter: "drop-shadow(0 8px 10px rgba(41,41,37,.17))" };
+
+function Garment({ kind, color, view = "front", tone = 0 }: { kind: Kind; color: string; view?: string; tone?: number }) {
+  const [c1, c2] = TONES[tone % TONES.length];
+  const id = "bg" + (tone % TONES.length) + view;
+  const lifestyle = view === "lifestyle";
+  const vb = view === "detail" ? "70 60 160 213" : "0 0 300 400";
+  return (
+    <svg viewBox={vb} className="w-full h-full block" role="img" aria-label={kind + " in " + color} preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id={id} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor={lifestyle ? "#CDD5C8" : c1} />
+          <stop offset="1" stopColor={lifestyle ? "#B9C4B3" : c2} />
+        </linearGradient>
+      </defs>
+      <rect x="-20" y="-20" width="340" height="440" fill={"url(#" + id + ")"} />
+      {lifestyle && <path d="M52 420 V170 A98 98 0 0 1 248 170 V420 Z" fill="#fff" fillOpacity=".34" />}
+      {lifestyle ? (
+        <g style={DROP} transform="translate(150 62) scale(.86) translate(-150 -80)">
+          <GarmentShape kind={kind} color={color} front />
+        </g>
+      ) : (
+        <g>
+          <Hanger />
+          <g style={DROP}><GarmentShape kind={kind} color={color} front={view !== "back"} /></g>
+        </g>
+      )}
+    </svg>
+  );
+}
+
+function ProductImage({ p, color, view = "front" }: { p: Product; color: string; view?: string }) {
+  if (p.image) return <img src={p.image} alt={p.name} loading="lazy" className="w-full h-full object-cover" />;
+  return <Garment kind={p.kind} color={color} view={view} tone={p.tone} />;
+}
+
+function Outfit({ pieces, tone = 0, arch = true }: { pieces: { kind: Kind; color: string }[]; tone?: number; arch?: boolean }) {
+  const [c1, c2] = TONES[tone % TONES.length];
+  const bottom = pieces.find((p) => BOTTOMS.includes(p.kind));
+  const top = pieces.find((p) => !BOTTOMS.includes(p.kind));
+  const id = "of" + tone + (top ? top.kind : "") + (bottom ? bottom.kind : "");
+  const s = bottom ? 0.72 : 0.92;
+  return (
+    <svg viewBox="0 0 300 400" className="w-full h-full block" role="img" aria-label="Outfit illustration" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id={id} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor={c1} />
+          <stop offset="1" stopColor={c2} />
+        </linearGradient>
+      </defs>
+      <rect x="-20" y="-20" width="340" height="440" fill={"url(#" + id + ")"} />
+      {arch && <path d="M46 420 V160 A104 104 0 0 1 254 160 V420 Z" fill="#fff" fillOpacity=".4" />}
+      <g style={DROP}>
+        {bottom && (
+          <g transform={"translate(150 192) scale(" + s + ") translate(-150 -82)"}>
+            <GarmentShape kind={bottom.kind} color={bottom.color} />
+          </g>
+        )}
+        {top && (
+          <g transform={"translate(150 " + (bottom ? 28 : 24) + ") scale(" + s + ") translate(-150 -80)"}>
+            <GarmentShape kind={top.kind} color={top.color} />
+          </g>
+        )}
+      </g>
+    </svg>
+  );
+}
+
+// ---------------------------------------------------------------------
+//  8. STORE (cart, wishlist, routing, UI state)
+// ---------------------------------------------------------------------
+const Store = createContext<any>(null);
+const useStore = () => useContext(Store);
+
+const emptyCustomer: Customer = { name: "", phone: "", email: "", address: "", city: "", district: "", postal: "", notes: "", payment: "cod" };
+
+function useHashRoute() {
+  const read = () => (location.hash || "").replace(/^#/, "") || "home";
+  const [route, setRoute] = useState<string>(read());
+  useEffect(() => {
+    const on = () => { setRoute(read()); window.scrollTo(0, 0); };
+    window.addEventListener("hashchange", on);
+    return () => window.removeEventListener("hashchange", on);
+  }, []);
+  return route;
+}
+
+function StoreProvider({ children }: { children: any }) {
+  const route = useHashRoute();
+  const [cart, setCart] = useState<CartLine[]>(() => load<CartLine[]>("elan_cart_v1", []).filter((l) => !!byId(l.id)));
+  const [wishlist, setWishlist] = useState<string[]>(() => load<string[]>("elan_wish_v1", []));
+  const [customer, setCustomer] = useState<Customer>(() => ({ ...emptyCustomer, ...load<Partial<Customer>>("elan_customer_v1", {}) }));
+  const [lastOrder, setLastOrder] = useState<any>(() => load<any>("elan_last_order_v1", null));
+  const [query, setQuery] = useState("");
+  const [ui, setUi] = useState({ cart: false, menu: false, search: false, account: false, sizeGuide: false, filters: false, quick: null as string | null });
+  const [toast, setToast] = useState<string | null>(null);
+  const toastTimer = useRef<any>(null);
+
+  useEffect(() => save("elan_cart_v1", cart), [cart]);
+  useEffect(() => save("elan_wish_v1", wishlist), [wishlist]);
+  useEffect(() => save("elan_customer_v1", customer), [customer]);
+
+  useEffect(() => {
+    setUi((u) => ({ ...u, menu: false, search: false, account: false, quick: null, filters: false, cart: false }));
+  }, [route]);
+
+  useEffect(() => {
+    const open = ui.cart || ui.menu || ui.search || ui.account || ui.sizeGuide || ui.filters || ui.quick;
+    document.body.style.overflow = open ? "hidden" : "";
+  }, [ui]);
+
+  const flash = useCallback((msg: string) => {
+    setToast(msg);
+    clearTimeout(toastTimer.current);
+    toastTimer.current = setTimeout(() => setToast(null), 2400);
+  }, []);
+
+  const addToCart = useCallback((id: string, color: string, size: Size, qty = 1, openCart = true) => {
+    setCart((prev) => {
+      const key = lineKey({ id, color, size });
+      const i = prev.findIndex((l) => lineKey(l) === key);
+      if (i >= 0) return prev.map((l, j) => (j === i ? { ...l, qty: Math.min(10, l.qty + qty) } : l));
+      return [...prev, { id, color, size, qty: Math.min(10, qty) }];
+    });
+    if (openCart) setUi((u) => ({ ...u, cart: true, quick: null }));
+  }, []);
+
+  const removeLine = useCallback((key: string) => setCart((prev) => prev.filter((l) => lineKey(l) !== key)), []);
+  const setQty = useCallback((key: string, qty: number) => {
+    setCart((prev) => prev.map((l) => (lineKey(l) === key ? { ...l, qty: Math.max(1, Math.min(10, qty)) } : l)));
+  }, []);
+  const changeVariant = useCallback((key: string, patch: { color?: string; size?: Size }) => {
+    setCart((prev) => {
+      const cur = prev.find((l) => lineKey(l) === key);
+      if (!cur) return prev;
+      const next = { ...cur, ...patch };
+      const nk = lineKey(next);
+      if (nk === key) return prev;
+      const dupe = prev.find((l) => lineKey(l) === nk);
+      if (dupe) return prev.filter((l) => lineKey(l) !== key).map((l) => (lineKey(l) === nk ? { ...l, qty: Math.min(10, l.qty + cur.qty) } : l));
+      return prev.map((l) => (lineKey(l) === key ? next : l));
+    });
+  }, []);
+  const clearCart = useCallback(() => setCart([]), []);
+
+  const toggleWish = useCallback((id: string) => {
+    setWishlist((prev) => {
+      const has = prev.includes(id);
+      flash(has ? "Removed from wishlist" : "Saved to wishlist");
+      return has ? prev.filter((x) => x !== id) : [...prev, id];
+    });
+  }, [flash]);
+
+  const totals = useMemo(() => {
+    const subtotal = cart.reduce((s, l) => s + (byId(l.id)?.price || 0) * l.qty, 0);
+    const delivery = deliveryFor(subtotal);
+    const count = cart.reduce((s, l) => s + l.qty, 0);
+    return { subtotal, delivery, total: subtotal + delivery, count };
+  }, [cart]);
+
+  const set = (patch: any) => setUi((u) => ({ ...u, ...patch }));
+  const closeAll = () => setUi({ cart: false, menu: false, search: false, account: false, sizeGuide: false, filters: false, quick: null });
+
+  const value = {
+    route, cart, wishlist, customer, setCustomer, lastOrder, setLastOrder, query, setQuery, ui, set, closeAll, toast, flash,
+    addToCart, removeLine, setQty, changeVariant, clearCart, toggleWish, totals,
+  };
+  return <Store.Provider value={value}>{children}</Store.Provider>;
+}
+
+// ---------------------------------------------------------------------
+//  9. SMALL UI PIECES
+// ---------------------------------------------------------------------
+function Reveal({ children, className = "", delay = 0 }: { children: any; className?: string; delay?: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [on, setOn] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (!("IntersectionObserver" in window)) { setOn(true); return; }
+    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setOn(true); io.disconnect(); } }, { threshold: 0.1, rootMargin: "0px 0px -4% 0px" });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+  return <div ref={ref} style={{ transitionDelay: delay + "ms" }} className={"reveal " + (on ? "in " : "") + className}>{children}</div>;
+}
+
+function Stars({ n }: { n: number }) {
+  return (
+    <div className="flex gap-0.5" role="img" aria-label={n + " out of 5 stars"}>
+      {[1, 2, 3, 4, 5].map((i) => (
+        <svg key={i} width="15" height="15" viewBox="0 0 24 24" fill={i <= n ? "#292925" : "none"} stroke="#292925" strokeWidth="1.4" strokeLinejoin="round">
+          <path d="M12 3l2.7 5.8 6.3.7-4.7 4.3 1.3 6.2L12 17l-5.6 3 1.3-6.2L3 9.5l6.3-.7z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
+function SectionHead({ eyebrow, title, action }: { eyebrow?: string; title: any; action?: any }) {
+  return (
+    <div className="flex items-end justify-between gap-6 mb-8 lg:mb-12">
+      <div>
+        {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
+        <h2 className="font-display text-[clamp(2rem,4.4vw,3.4rem)] leading-[1.05] text-balance">{title}</h2>
+      </div>
+      {action}
+    </div>
+  );
+}
+
+function Swatch({ color, on, onClick, size = 22 }: { color: string; on?: boolean; onClick?: () => void; size?: number }) {
+  const inner = (
+    <span className={"sw " + (on ? "on" : "")} style={{ background: SWATCH[color], width: size, height: size }} />
+  );
+  if (!onClick) return <span className="p-[3px]" title={color}>{inner}</span>;
+  return (
+    <button type="button" onClick={onClick} aria-label={color} aria-pressed={!!on} title={color} className="swb">
+      {inner}
+    </button>
+  );
+}
+
+function Panel({ open, onClose, side = "right", label, children }: { open: boolean; onClose: () => void; side?: "left" | "right"; label: string; children: any }) {
+  useEffect(() => {
+    if (!open) return;
+    const h = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", h);
+    return () => window.removeEventListener("keydown", h);
+  }, [open, onClose]);
+  const closed = side === "right" ? "translate-x-full" : "-translate-x-full";
+  return (
+    <div className={"fixed inset-0 z-[100] " + (open ? "" : "pointer-events-none")} aria-hidden={!open}>
+      <div onClick={onClose} className={"absolute inset-0 bg-charcoal/40 transition-opacity duration-500 " + (open ? "opacity-100" : "opacity-0")} />
+      <aside
+        role="dialog" aria-modal="true" aria-label={label}
+        className={"absolute top-0 bottom-0 flex flex-col w-[min(440px,92vw)] bg-cream shadow-2xl transition-transform duration-500 ease-[cubic-bezier(.2,.7,.2,1)] " + (side === "right" ? "right-0 " : "left-0 ") + (open ? "translate-x-0" : closed)}
+        style={{ paddingTop: "env(safe-area-inset-top,0px)", paddingBottom: "env(safe-area-inset-bottom,0px)", [side === "right" ? "paddingRight" : "paddingLeft"]: "env(safe-area-inset-" + side + ",0px)" }}
+      >
+        {children}
+      </aside>
+    </div>
+  );
+}
+
+function Modal({ open, onClose, label, wide = false, children }: { open: boolean; onClose: () => void; label: string; wide?: boolean; children: any }) {
+  useEffect(() => {
+    if (!open) return;
+    const h = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", h);
+    return () => window.removeEventListener("keydown", h);
+  }, [open, onClose]);
+  if (!open) return null;
+  return (
+    <div className="fixed inset-0 z-[110] flex items-end sm:items-center justify-center sm:p-6" style={{ paddingLeft: "max(0px,env(safe-area-inset-left,0px))", paddingRight: "max(0px,env(safe-area-inset-right,0px))" }}>
+      <div onClick={onClose} className="absolute inset-0 bg-charcoal/45 fade" />
+      <div role="dialog" aria-modal="true" aria-label={label}
+        className={"pop relative bg-cream w-full max-h-[92vh] overflow-y-auto rounded-t-[18px] sm:rounded-[14px] shadow-2xl " + (wide ? "sm:max-w-[920px]" : "sm:max-w-[520px]")}
+        style={{ paddingBottom: "env(safe-area-inset-bottom,0px)" }}>
+        <button onClick={onClose} aria-label="Close" className="absolute right-3 top-3 z-10 w-11 h-11 grid place-items-center rounded-full bg-white/90 hover:bg-white transition-colors">
+          <Icon name="X" size={20} />
+        </button>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------
+//  10. PRODUCT CARD
+// ---------------------------------------------------------------------
+function ProductCard({ p }: { p: Product }) {
+  const s = useStore();
+  const [color, setColor] = useState(p.colors[0]);
+  const [picking, setPicking] = useState(false);
+  const wished = s.wishlist.includes(p.id);
+  return (
+    <article className="group">
+      <div className="relative aspect-[3/4] rounded-[14px] bg-softgray zoom">
+        <a href={"#product-" + p.id} aria-label={"View " + p.name} className="block w-full h-full zt">
+          <ProductImage p={p} color={color} />
+        </a>
+        {p.isNew && <span className="absolute left-3 top-3 bg-white/95 text-[10.5px] tracking-[.16em] uppercase font-semibold px-2.5 py-1.5 rounded-full">New Arrival</span>}
+        <button type="button" onClick={() => s.toggleWish(p.id)} aria-pressed={wished} aria-label={wished ? "Remove from wishlist" : "Add to wishlist"}
+          className="absolute right-2.5 top-2.5 w-11 h-11 grid place-items-center rounded-full bg-white/90 hover:bg-white transition-colors">
+          <Icon name="Heart" size={19} className={wished ? "fill-charcoal" : ""} />
+        </button>
+        <button type="button" onClick={() => s.set({ quick: p.id })} aria-label={"Quick view " + p.name}
+          className="absolute right-2.5 bottom-2.5 md:right-auto md:left-1/2 md:-translate-x-1/2 md:bottom-3 md:opacity-0 md:translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-500 flex items-center gap-2 h-11 px-3.5 md:px-5 rounded-full bg-white/95 hover:bg-white text-[11px] tracking-[.14em] uppercase font-semibold">
+          <Icon name="Eye" size={16} /><span className="hidden md:inline">Quick View</span>
+        </button>
+        {picking && (
+          <div className="absolute inset-x-0 bottom-0 p-3.5 pop" style={{ background: "rgba(255,255,255,.97)" }}>
+            <div className="flex items-center justify-between mb-2.5">
+              <span className="text-[11px] tracking-[.16em] uppercase font-semibold">Select size</span>
+              <button type="button" onClick={() => setPicking(false)} aria-label="Close size picker" className="w-9 h-9 -mr-2 grid place-items-center"><Icon name="X" size={17} /></button>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {ALL_SIZES.map((z) => (
+                <button key={z} type="button" disabled={!p.sizes.includes(z)} className="chip" onClick={() => { s.addToCart(p.id, color, z, 1); setPicking(false); }}>{z}</button>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+      <div className="pt-4">
+        <div className="flex items-start justify-between gap-3">
+          <h3 className="text-[15px] leading-snug font-medium"><a href={"#product-" + p.id} className="link-u">{p.name}</a></h3>
+          <p className="text-[15px] font-medium whitespace-nowrap tabular-nums">{fmt(p.price)}</p>
+        </div>
+        <div className="flex items-center justify-between mt-1.5">
+          <div className="flex -ml-[3px]">
+            {p.colors.map((c) => <Swatch key={c} color={c} on={c === color} onClick={() => setColor(c)} size={18} />)}
+          </div>
+          <p className="text-[12px] text-muted tracking-wide">{p.sizes[0]} – {p.sizes[p.sizes.length - 1]}</p>
+        </div>
+        <button type="button" className="btn btn-line w-full mt-3.5 !min-h-[44px]" onClick={() => setPicking(true)}>
+          <Icon name="ShoppingBag" size={16} /> Add to Cart
+        </button>
+      </div>
+    </article>
+  );
+}
+
+function ProductGrid({ items, cols = "grid-cols-2 md:grid-cols-3 lg:grid-cols-4" }: { items: Product[]; cols?: string }) {
+  return <div className={"grid gap-x-4 gap-y-9 md:gap-x-6 md:gap-y-12 " + cols}>{items.map((p) => <ProductCard key={p.id} p={p} />)}</div>;
+}
+
+// ---------------------------------------------------------------------
+//  11. QUICK VIEW, SIZE GUIDE, ACCOUNT
+// ---------------------------------------------------------------------
+function QuickView() {
+  const s = useStore();
+  const p = s.ui.quick ? byId(s.ui.quick) : null;
+  const [color, setColor] = useState("");
+  const [size, setSize] = useState<Size | "">("");
+  const [qty, setQty] = useState(1);
+  const [err, setErr] = useState(false);
+  useEffect(() => { if (p) { setColor(p.colors[0]); setSize(""); setQty(1); setErr(false); } }, [s.ui.quick]);
+  return (
+    <Modal open={!!p} onClose={() => s.set({ quick: null })} label="Quick view" wide>
+      {p && (
+        <div className="grid md:grid-cols-2">
+          <div className="aspect-[3/4] md:aspect-auto md:min-h-[520px] bg-softgray"><ProductImage p={p} color={color} /></div>
+          <div className="p-6 md:p-10 flex flex-col">
+            <p className="eyebrow">{p.category}</p>
+            <h2 className="font-display text-[2.2rem] leading-tight mt-2">{p.name}</h2>
+            <p className="text-lg mt-2 tabular-nums">{fmt(p.price)}</p>
+            <p className="text-[14.5px] text-muted mt-4 leading-relaxed">{p.description}</p>
+            <p className="text-[13px] mt-6 mb-2"><span className="font-semibold">Colour:</span> {color}</p>
+            <div className="flex -ml-[3px]">{p.colors.map((c) => <Swatch key={c} color={c} on={c === color} onClick={() => setColor(c)} size={26} />)}</div>
+            <div className="flex items-center justify-between mt-6 mb-2">
+              <p className="text-[13px]"><span className="font-semibold">Size:</span> {size || "Select"}</p>
+              <button type="button" className="text-[12px] underline underline-offset-4" onClick={() => s.set({ sizeGuide: true })}>Size guide</button>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {ALL_SIZES.map((z) => <button key={z} type="button" disabled={!p.sizes.includes(z)} className={"chip " + (size === z ? "on" : "")} onClick={() => { setSize(z); setErr(false); }}>{z}</button>)}
+            </div>
+            {err && <p className="text-[13px] text-[#9E3B2F] mt-2" role="alert">Please choose a size.</p>}
+            <div className="flex gap-3 mt-7">
+              <Qty qty={qty} setQty={setQty} />
+              <button type="button" className="btn btn-dark flex-1" onClick={() => { if (!size) { setErr(true); return; } s.addToCart(p.id, color, size as Size, qty); }}>Add to Cart</button>
+            </div>
+            <a href={"#product-" + p.id} className="text-[13px] underline underline-offset-4 mt-6 self-start">View full details</a>
+          </div>
+        </div>
+      )}
+    </Modal>
+  );
+}
+
+function Qty({ qty, setQty, small = false }: { qty: number; setQty: (n: number) => void; small?: boolean }) {
+  const h = small ? "h-10" : "h-12";
+  return (
+    <div className={"inline-flex items-center border border-line rounded-md bg-white " + h}>
+      <button type="button" aria-label="Decrease quantity" disabled={qty <= 1} onClick={() => setQty(Math.max(1, qty - 1))} className={"w-11 grid place-items-center disabled:opacity-30 " + h}><Icon name="Minus" size={16} /></button>
+      <span className="w-8 text-center text-[14px] tabular-nums" aria-live="polite">{qty}</span>
+      <button type="button" aria-label="Increase quantity" disabled={qty >= 10} onClick={() => setQty(Math.min(10, qty + 1))} className={"w-11 grid place-items-center disabled:opacity-30 " + h}><Icon name="Plus" size={16} /></button>
+    </div>
+  );
+}
+
+function SizeGuide() {
+  const s = useStore();
+  return (
+    <Modal open={s.ui.sizeGuide} onClose={() => s.set({ sizeGuide: false })} label="Size guide">
+      <div className="p-7 md:p-9">
+        <p className="eyebrow">Fit</p>
+        <h2 className="font-display text-[2.2rem] leading-tight mt-2">Size guide</h2>
+        <p className="text-[14px] text-muted mt-3">Body measurements in centimetres. If you are between sizes, choose the larger size for a relaxed fit.</p>
+        <div className="overflow-x-auto mt-6">
+          <table className="w-full text-[14px] text-left tabular-nums">
+            <thead><tr className="border-b border-line text-[11px] tracking-[.14em] uppercase text-muted"><th className="py-3 pr-4 font-semibold">Size</th><th className="py-3 pr-4 font-semibold">Bust</th><th className="py-3 pr-4 font-semibold">Waist</th><th className="py-3 font-semibold">Hip</th></tr></thead>
+            <tbody>
+              {SIZE_CHART.map((r) => (
+                <tr key={r.size} className="border-b border-line/70"><td className="py-3 pr-4 font-semibold">{r.size}</td><td className="py-3 pr-4">{r.bust}</td><td className="py-3 pr-4">{r.waist}</td><td className="py-3">{r.hip}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-[13px] text-muted mt-5">{MODEL_INFO}</p>
+      </div>
+    </Modal>
+  );
+}
+
+function AccountModal() {
+  const s = useStore();
+  return (
+    <Modal open={s.ui.account} onClose={() => s.set({ account: false })} label="Account">
+      <div className="p-7 md:p-9">
+        <p className="eyebrow">Account</p>
+        <h2 className="font-display text-[2.2rem] leading-tight mt-2">Your {CONFIG.brand.short}</h2>
+        <p className="text-[14.5px] text-muted mt-3 leading-relaxed">Customer accounts are coming soon. Until then, your bag and wishlist are saved on this device, and you can order without signing in.</p>
+        <div className="mt-6 grid gap-3">
+          <a href="#wishlist" className="btn btn-dark">Wishlist ({s.wishlist.length})</a>
+          <a href="#contact" className="btn btn-line">Contact us</a>
+        </div>
+      </div>
+    </Modal>
+  );
+}
+
+// ---------------------------------------------------------------------
+//  12. HEADER, SEARCH, MENU, CART DRAWER, FOOTER
+// ---------------------------------------------------------------------
+const NAV = [
+  { label: "Home", route: "home" },
+  { label: "Shop", route: "shop" },
+  { label: "New Arrivals", route: "new-arrivals" },
+  { label: "Office Essentials", route: "office-essentials" },
+  { label: "Collections", route: "collections" },
+  { label: "About Us", route: "about" },
+];
+
+function isActive(route: string, item: string) {
+  if (item === "shop") return route === "shop" || route.startsWith("shop-") || route === "bestsellers";
+  if (item === "collections") return route === "collections" || route.startsWith("look-");
+  return route === item;
+}
+
+function Logo({ light = false }: { light?: boolean }) {
+  return (
+    <a href="#home" aria-label={CONFIG.brand.name + " home"} className={"font-display text-[1.9rem] md:text-[2.1rem] leading-none tracking-[.18em] pl-[.18em] " + (light ? "text-cream" : "")}>
+      {CONFIG.brand.short}
+    </a>
+  );
+}
+
+function Header() {
+  const s = useStore();
+  return (
+    <div>
+      <div className="bg-charcoal text-cream text-[12px] tracking-[.06em] text-center py-2.5">
+        <div className="wrap">{CONFIG.announcement}</div>
+      </div>
+      <header className="sticky-top z-40 bg-cream/95 backdrop-blur border-b border-line/70">
+        <div className="wrap h-[64px] lg:h-[76px] flex items-center justify-between gap-4">
+          <div className="flex items-center gap-2 lg:gap-0 lg:w-[200px]">
+            <button type="button" className="lg:hidden w-11 h-11 -ml-2.5 grid place-items-center" onClick={() => s.set({ menu: true })} aria-label="Open menu"><Icon name="Menu" size={24} /></button>
+            <div className="hidden lg:block"><Logo /></div>
+          </div>
+          <div className="lg:hidden"><Logo /></div>
+          <nav className="hidden lg:flex items-center gap-9 text-[13.5px]" aria-label="Main">
+            {NAV.map((n) => (
+              <a key={n.route} href={"#" + n.route} className={"link-u py-2 " + (isActive(s.route, n.route) ? "on font-semibold" : "")}>{n.label}</a>
+            ))}
+          </nav>
+          <div className="flex items-center justify-end gap-0.5 lg:w-[200px]">
+            <button type="button" className="w-11 h-11 grid place-items-center" onClick={() => s.set({ search: true })} aria-label="Search"><Icon name="Search" size={21} /></button>
+            <a href="#wishlist" className="hidden sm:grid relative w-11 h-11 place-items-center" aria-label={"Wishlist, " + s.wishlist.length + " items"}>
+              <Icon name="Heart" size={21} />
+              {s.wishlist.length > 0 && <span className="absolute top-1.5 right-1 min-w-[16px] h-4 px-1 rounded-full bg-sagedeep text-white text-[10px] grid place-items-center">{s.wishlist.length}</span>}
+            </a>
+            <button type="button" className="hidden sm:grid w-11 h-11 place-items-center" onClick={() => s.set({ account: true })} aria-label="Account"><Icon name="User" size={21} /></button>
+            <button type="button" className="relative w-11 h-11 grid place-items-center" onClick={() => s.set({ cart: true })} aria-label={"Shopping bag, " + s.totals.count + " items"}>
+              <Icon name="ShoppingBag" size={21} />
+              {s.totals.count > 0 && <span className="absolute top-1 right-0.5 min-w-[18px] h-[18px] px-1 rounded-full bg-charcoal text-cream text-[10.5px] grid place-items-center tabular-nums">{s.totals.count}</span>}
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+  );
+}
+
+function MobileMenu() {
+  const s = useStore();
+  return (
+    <Panel open={s.ui.menu} onClose={() => s.set({ menu: false })} side="left" label="Menu">
+      <div className="flex items-center justify-between px-5 h-[64px] border-b border-line">
+        <Logo />
+        <button type="button" className="w-11 h-11 -mr-2 grid place-items-center" onClick={() => s.set({ menu: false })} aria-label="Close menu"><Icon name="X" size={22} /></button>
+      </div>
+      <nav className="flex-1 overflow-y-auto px-5 py-4" aria-label="Mobile">
+        {NAV.map((n) => (
+          <a key={n.route} href={"#" + n.route} className="flex items-center justify-between h-14 border-b border-line/70 font-display text-[1.7rem]">
+            {n.label}<Icon name="ChevronRight" size={18} />
+          </a>
+        ))}
+        <p className="eyebrow mt-8 mb-2">Shop by category</p>
+        <div className="grid grid-cols-2 gap-x-4">
+          {CATEGORIES.slice(1).map((c) => <a key={c.id} href={"#" + c.route} className="h-11 flex items-center text-[14px]">{c.label}</a>)}
+        </div>
+        <div className="mt-8 grid gap-3">
+          <button type="button" className="btn btn-line" onClick={() => s.set({ menu: false, account: true })}><Icon name="User" size={16} /> Account</button>
+          <a href="#wishlist" className="btn btn-line"><Icon name="Heart" size={16} /> Wishlist ({s.wishlist.length})</a>
+        </div>
+      </nav>
+    </Panel>
+  );
+}
+
+function SearchOverlay() {
+  const s = useStore();
+  const [q, setQ] = useState("");
+  const ref = useRef<HTMLInputElement>(null);
+  useEffect(() => { if (s.ui.search) setTimeout(() => ref.current && ref.current.focus(), 200); }, [s.ui.search]);
+  useEffect(() => {
+    if (!s.ui.search) return;
+    const h = (e: KeyboardEvent) => { if (e.key === "Escape") s.set({ search: false }); };
+    window.addEventListener("keydown", h);
+    return () => window.removeEventListener("keydown", h);
+  }, [s.ui.search]);
+  const results = useMemo(() => (q.trim() ? searchProducts(q).slice(0, 5) : []), [q]);
+  const submit = (e: any) => { e.preventDefault(); s.setQuery(q); s.closeAll(); location.hash = "shop"; };
+  const open = s.ui.search;
+  return (
+    <div className={"fixed inset-0 z-[105] " + (open ? "" : "pointer-events-none")} aria-hidden={!open}>
+      <div onClick={() => s.set({ search: false })} className={"absolute inset-0 bg-charcoal/40 transition-opacity duration-500 " + (open ? "opacity-100" : "opacity-0")} />
+      <div role="dialog" aria-modal="true" aria-label="Search" className={"absolute inset-x-0 top-0 bg-cream shadow-xl transition-transform duration-500 ease-[cubic-bezier(.2,.7,.2,1)] " + (open ? "translate-y-0" : "-translate-y-full")} style={{ paddingTop: "env(safe-area-inset-top,0px)" }}>
+        <div className="wrap py-5 md:py-8">
+          <form onSubmit={submit} className="flex items-center gap-3 border-b border-charcoal pb-3">
+            <Icon name="Search" size={22} />
+            <input ref={ref} id="site-search" value={q} onChange={(e: any) => setQ(e.target.value)} placeholder="Search blouses, trousers, dresses…" className="flex-1 bg-transparent outline-none font-display text-[1.6rem] md:text-[2rem] placeholder:text-charcoal/35 min-w-0" aria-label="Search products" />
+            <button type="button" onClick={() => s.set({ search: false })} className="w-11 h-11 grid place-items-center" aria-label="Close search"><Icon name="X" size={22} /></button>
+          </form>
+          {q.trim() === "" ? (
+            <div className="pt-5 pb-3">
+              <p className="eyebrow mb-3">Popular searches</p>
+              <div className="flex flex-wrap gap-2">
+                {["linen shirt", "trousers", "midi dress", "blazer", "sage"].map((t) => <button key={t} type="button" className="chip" onClick={() => setQ(t)}>{t}</button>)}
+              </div>
+            </div>
+          ) : (
+            <div className="pt-4 pb-2">
+              {results.length === 0 ? <p className="text-muted py-4">No products match “{q}”.</p> : (
+                <ul>
+                  {results.map((p) => (
+                    <li key={p.id}>
+                      <a href={"#product-" + p.id} className="flex items-center gap-4 py-2.5 hover:bg-white/70 rounded-lg px-2 -mx-2">
+                        <span className="w-14 aspect-[3/4] rounded-md overflow-hidden bg-softgray block"><ProductImage p={p} color={p.colors[0]} /></span>
+                        <span className="flex-1 text-[15px]">{p.name}<span className="block text-[12.5px] text-muted">{p.category}</span></span>
+                        <span className="text-[14px] tabular-nums">{fmt(p.price)}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <button type="button" onClick={submit} className="btn btn-dark mt-3">See all results</button>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CartLineItem({ l }: { l: CartLine }) {
+  const s = useStore();
+  const p = byId(l.id)!;
+  const key = lineKey(l);
+  return (
+    <li className="flex gap-4 py-5 border-b border-line/70">
+      <a href={"#product-" + p.id} className="w-[88px] shrink-0 aspect-[3/4] rounded-lg overflow-hidden bg-softgray block"><ProductImage p={p} color={l.color} /></a>
+      <div className="flex-1 min-w-0">
+        <div className="flex justify-between gap-3">
+          <a href={"#product-" + p.id} className="text-[14.5px] font-medium leading-snug">{p.name}</a>
+          <button type="button" onClick={() => s.removeLine(key)} aria-label={"Remove " + p.name} className="w-9 h-9 -mt-1.5 -mr-2 grid place-items-center text-muted hover:text-charcoal"><Icon name="Trash2" size={17} /></button>
+        </div>
+        <p className="text-[13.5px] mt-0.5 tabular-nums">{fmt(p.price)}</p>
+        <div className="flex gap-2 mt-2.5">
+          <select className="field field-sm !w-auto" aria-label="Colour" value={l.color} onChange={(e: any) => s.changeVariant(key, { color: e.target.value })}>
+            {p.colors.map((c) => <option key={c}>{c}</option>)}
+          </select>
+          <select className="field field-sm !w-auto" aria-label="Size" value={l.size} onChange={(e: any) => s.changeVariant(key, { size: e.target.value })}>
+            {p.sizes.map((z) => <option key={z}>{z}</option>)}
+          </select>
+        </div>
+        <div className="flex items-center justify-between mt-3">
+          <Qty small qty={l.qty} setQty={(n) => s.setQty(key, n)} />
+          <p className="text-[14.5px] font-medium tabular-nums">{fmt(p.price * l.qty)}</p>
+        </div>
+      </div>
+    </li>
+  );
+}
+
+function FreeDeliveryBar({ subtotal }: { subtotal: number }) {
+  const left = Math.max(0, CONFIG.freeDeliveryOver - subtotal);
+  const pct = Math.min(100, (subtotal / CONFIG.freeDeliveryOver) * 100);
+  return (
+    <div>
+      <p className="text-[13px]">{left === 0 ? "You have unlocked free delivery." : <span>Add <b className="tabular-nums">{fmt(left)}</b> more for free delivery.</span>}</p>
+      <div className="h-1.5 rounded-full bg-gray mt-2 overflow-hidden"><div className="h-full bg-sagedeep transition-all duration-700" style={{ width: pct + "%" }} /></div>
+    </div>
+  );
+}
+
+function CartDrawer() {
+  const s = useStore();
+  const empty = s.cart.length === 0;
+  const msg = buildWhatsAppMessage(s.cart, s.customer, s.totals.subtotal, s.totals.delivery);
+  return (
+    <Panel open={s.ui.cart} onClose={() => s.set({ cart: false })} label="Shopping bag">
+      <div className="flex items-center justify-between px-5 h-[64px] border-b border-line shrink-0">
+        <h2 className="font-display text-[1.7rem]">Your bag <span className="text-muted text-[1.1rem]">({s.totals.count})</span></h2>
+        <button type="button" className="w-11 h-11 -mr-2 grid place-items-center" onClick={() => s.set({ cart: false })} aria-label="Close bag"><Icon name="X" size={22} /></button>
+      </div>
+      {empty ? (
+        <div className="flex-1 grid place-items-center px-8 text-center">
+          <div>
+            <div className="mx-auto w-16 h-16 rounded-full bg-beige grid place-items-center mb-5"><Icon name="ShoppingBag" size={26} /></div>
+            <h3 className="font-display text-[1.9rem]">Your bag is empty</h3>
+            <p className="text-muted text-[14.5px] mt-2 max-w-[280px] mx-auto">Add a few pieces and they will be waiting here.</p>
+            <a href="#shop" className="btn btn-dark mt-6" onClick={() => s.set({ cart: false })}>Start shopping</a>
+          </div>
+        </div>
+      ) : (
+        <div className="flex-1 flex flex-col min-h-0">
+          <div className="px-5 pt-4 shrink-0"><FreeDeliveryBar subtotal={s.totals.subtotal} /></div>
+          <ul className="flex-1 overflow-y-auto px-5">{s.cart.map((l: CartLine) => <CartLineItem key={lineKey(l)} l={l} />)}</ul>
+          <div className="px-5 py-5 border-t border-line bg-white/60 shrink-0">
+            <dl className="text-[14px] grid gap-1.5 tabular-nums">
+              <div className="flex justify-between"><dt className="text-muted">Subtotal</dt><dd>{fmt(s.totals.subtotal)}</dd></div>
+              <div className="flex justify-between"><dt className="text-muted">Delivery</dt><dd>{s.totals.delivery === 0 ? "Free" : fmt(s.totals.delivery)}</dd></div>
+              <div className="flex justify-between text-[16px] font-semibold pt-2 mt-1 border-t border-line"><dt>Total</dt><dd>{fmt(s.totals.total)}</dd></div>
+            </dl>
+            <a href="#checkout" className="btn btn-dark w-full mt-4" onClick={() => s.set({ cart: false })}>Checkout</a>
+            <a href={waLink(msg)} target="_blank" rel="noopener noreferrer" className="btn btn-line w-full mt-2.5"><Icon name="MessageCircle" size={17} /> Order via WhatsApp</a>
+          </div>
+        </div>
+      )}
+    </Panel>
+  );
+}
+
+function Footer() {
+  const s = useStore();
+  const col = "grid gap-2.5 text-[14px] text-cream/75";
+  const h = "text-[11.5px] tracking-[.2em] uppercase text-cream mb-4 font-semibold";
+  return (
+    <footer className="bg-charcoal text-cream mt-24">
+      <div className="wrap pt-16 pb-10">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <Logo light />
+            <p className="text-cream/75 text-[14.5px] leading-relaxed mt-5 max-w-[340px]">{CONFIG.brand.description}</p>
+            <div className="flex gap-2 mt-6">
+              {[["Instagram", "Instagram", CONFIG.social.instagram], ["Facebook", "Facebook", CONFIG.social.facebook], ["TikTok", "Music2", CONFIG.social.tiktok]].map(([label, icon, href]) => (
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="w-11 h-11 rounded-full border border-cream/25 grid place-items-center hover:bg-cream hover:text-charcoal transition-colors"><Icon name={icon} size={18} /></a>
+              ))}
+              <a href={"https://wa.me/" + CONFIG.whatsappNumber} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-11 h-11 rounded-full border border-cream/25 grid place-items-center hover:bg-cream hover:text-charcoal transition-colors"><Icon name="MessageCircle" size={18} /></a>
+            </div>
+          </div>
+          <div className="lg:col-span-2">
+            <h3 className={h}>Shop</h3>
+            <ul className={col}>
+              {CATEGORIES.map((c) => <li key={c.id}><a className="link-u" href={"#" + c.route}>{c.label}</a></li>)}
+              <li><a className="link-u" href="#new-arrivals">New Arrivals</a></li>
+            </ul>
+          </div>
+          <div className="lg:col-span-3">
+            <h3 className={h}>Customer support</h3>
+            <ul className={col}>
+              <li><a className="link-u" href="#contact">Contact &amp; FAQs</a></li>
+              <li><button type="button" className="link-u text-left" onClick={() => s.set({ sizeGuide: true })}>Size guide</button></li>
+              <li><a className="link-u" href="#policy-shipping">Shipping &amp; delivery</a></li>
+              <li><a className="link-u" href="#policy-returns">Returns &amp; exchanges</a></li>
+            </ul>
+          </div>
+          <div className="lg:col-span-3">
+            <h3 className={h}>Contact</h3>
+            <ul className={col}>
+              <li>{CONFIG.contact.address}</li>
+              <li className="select-all">{CONFIG.contact.phone}</li>
+              <li className="select-all">{CONFIG.contact.email}</li>
+              <li>{CONFIG.contact.hours}</li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-14 pt-6 border-t border-cream/15 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-[12.5px] text-cream/60">
+          <p>© {new Date().getFullYear()} {CONFIG.brand.name}. {CONFIG.brand.tagline}</p>
+          <ul className="flex flex-wrap gap-x-6 gap-y-1">
+            <li><a className="link-u" href="#policy-privacy">Privacy Policy</a></li>
+            <li><a className="link-u" href="#policy-returns">Return Policy</a></li>
+            <li><a className="link-u" href="#policy-shipping">Shipping Policy</a></li>
+            <li><a className="link-u" href="#policy-terms">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function Toast() {
+  const s = useStore();
+  return (
+    <div className="fixed inset-x-0 z-[130] flex justify-center pointer-events-none" style={{ bottom: "calc(env(safe-area-inset-bottom,0px) + 88px)" }} aria-live="polite">
+      {s.toast && <div className="pop bg-charcoal text-cream text-[13.5px] px-5 py-3 rounded-full shadow-xl">{s.toast}</div>}
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------
+//  13. HOME
+// ---------------------------------------------------------------------
+function Hero() {
+  const blazer = byId("relaxed-everyday-blazer")!;
+  return (
+    <section className="bg-beige">
+      <div className="wrap grid lg:grid-cols-12 items-center gap-10 lg:gap-6 py-12 lg:py-0 lg:min-h-[700px]">
+        <div className="lg:col-span-6 lg:py-24 lg:pr-10">
+          <p className="eyebrow">New season · The Linen Edit</p>
+          <h1 className="font-display text-[clamp(3rem,7.4vw,6.2rem)] leading-[.96] mt-6 text-balance">
+            Your Everyday Workwear, <em className="text-sagedeep">Elevated.</em>
+          </h1>
+          <p className="text-[17px] md:text-[18px] text-charcoal/75 mt-6 max-w-[460px] leading-relaxed">Thoughtfully designed essentials for women who move with confidence.</p>
+          <div className="flex flex-col sm:flex-row gap-3 mt-9">
+            <a href="#shop" className="btn btn-dark">Shop the Collection</a>
+            <a href="#new-arrivals" className="btn btn-line">Explore New Arrivals</a>
+          </div>
+        </div>
+        <div className="lg:col-span-6 relative">
+          <div className="relative mx-auto w-full max-w-[520px] lg:max-w-none lg:ml-auto lg:w-[84%] aspect-[3/4] rounded-t-[999px] rounded-b-[14px] overflow-hidden lg:translate-y-6">
+            <Outfit tone={3} arch={false} pieces={[{ kind: "blazer", color: "Oat" }, { kind: "wide", color: "Charcoal" }]} />
+          </div>
+          <a href="#look-monday-minimal" className="absolute left-2 lg:left-0 bottom-6 lg:bottom-14 bg-white rounded-xl shadow-lg px-5 py-4 max-w-[240px]">
+            <p className="eyebrow">Monday Minimal</p>
+            <p className="font-display text-[1.25rem] leading-tight mt-1.5">{blazer.name} + Wide-Leg Trousers</p>
+            <p className="text-[12.5px] mt-2 flex items-center gap-1.5 text-muted">Shop the look <Icon name="ArrowRight" size={14} /></p>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function TrustStrip() {
+  const items = [["Truck", "Islandwide delivery"], ["RotateCcw", "7-day easy exchanges"], ["Banknote", "Cash on delivery"], ["MessageCircle", "Order via WhatsApp"]];
+  return (
+    <section className="border-y border-line/70 bg-white/50">
+      <div className="wrap grid grid-cols-2 lg:grid-cols-4 gap-y-4 py-5">
+        {items.map(([ic, t]) => (
+          <div key={t} className="flex items-center gap-3 text-[13px]"><Icon name={ic} size={19} /><span>{t}</span></div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function CategoryCards() {
+  const cards = [
+    { title: "Office Blouses", kind: "blouse" as Kind, color: "Ivory", tone: 0, route: "shop-blouses" },
+    { title: "Comfortable Trousers", kind: "wide" as Kind, color: "Sand", tone: 1, route: "shop-trousers" },
+    { title: "Midi Dresses", kind: "dress" as Kind, color: "Sage", tone: 2, route: "shop-dresses" },
+    { title: "Everyday Essentials", kind: "blazer" as Kind, color: "Oat", tone: 3, route: "office-essentials" },
+  ];
+  return (
+    <section className="wrap pt-20 lg:pt-28">
+      <Reveal><SectionHead eyebrow="Shop by category" title="The essentials, edited." /></Reveal>
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+        {cards.map((c, i) => (
+          <Reveal key={c.title} delay={i * 80}>
+            <a href={"#" + c.route} className="group block">
+              <div className="aspect-[3/4] rounded-[14px] overflow-hidden zoom relative">
+                <div className="w-full h-full zt"><Garment kind={c.kind} color={c.color} tone={c.tone} /></div>
+              </div>
+              <div className="flex items-center justify-between gap-3 mt-4">
+                <h3 className="font-display text-[1.45rem] lg:text-[1.8rem] leading-tight">{c.title}</h3>
+              </div>
+              <span className="inline-flex items-center gap-2 mt-2 text-[11.5px] tracking-[.16em] uppercase font-semibold link-u">Shop Now <Icon name="ArrowRight" size={14} /></span>
+            </a>
+          </Reveal>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function NewArrivals() {
+  const items = PRODUCTS.filter((p) => p.isNew).sort((a, b) => b.added - a.added).slice(0, 6);
+  return (
+    <section className="wrap pt-24 lg:pt-32">
+      <Reveal><SectionHead eyebrow="Just landed" title="New Arrivals" action={<a href="#new-arrivals" className="hidden sm:inline-flex items-center gap-2 text-[12px] tracking-[.16em] uppercase font-semibold link-u">View all <Icon name="ArrowRight" size={14} /></a>} /></Reveal>
+      <ProductGrid items={items} cols="grid-cols-2 md:grid-cols-3" />
+      <a href="#new-arrivals" className="btn btn-line mt-10 sm:hidden w-full">View all new arrivals</a>
+    </section>
+  );
+}
+
+function BrandStory() {
+  return (
+    <section className="bg-beige mt-24 lg:mt-32">
+      <div className="wrap grid lg:grid-cols-2 gap-10 lg:gap-20 items-center py-16 lg:py-28">
+        <Reveal>
+          <div className="relative max-w-[520px] mx-auto lg:mx-0 w-full">
+            <div className="aspect-[4/5] rounded-[14px] overflow-hidden">
+              <Outfit tone={1} pieces={[{ kind: "shirt", color: "Ivory" }, { kind: "trousers", color: "Sage" }]} />
+            </div>
+            <p className="absolute -bottom-4 right-4 bg-cream text-[12px] tracking-[.14em] uppercase px-4 py-2.5 rounded-full shadow-md">Designed in Colombo</p>
+          </div>
+        </Reveal>
+        <Reveal delay={120}>
+          <p className="eyebrow">Our story</p>
+          <h2 className="font-display text-[clamp(2.2rem,4.6vw,3.8rem)] leading-[1.04] mt-4 text-balance">Made for Your Everyday Ambition.</h2>
+          <p className="text-[17px] text-charcoal/75 leading-relaxed mt-6 max-w-[520px]">Workwear should never mean compromising on comfort or style. We create thoughtfully designed essentials that make getting dressed for work effortless, confident, and comfortable.</p>
+          <a href="#about" className="btn btn-dark mt-8">About Our Story</a>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+function Bestsellers() {
+  const items = PRODUCTS.filter((p) => p.best);
+  const ref = useRef<HTMLDivElement>(null);
+  const scroll = (dir: number) => { const el = ref.current; if (el) el.scrollBy({ left: dir * el.clientWidth * 0.8, behavior: "smooth" }); };
+  return (
+    <section className="pt-24 lg:pt-32">
+      <div className="wrap">
+        <Reveal>
+          <SectionHead eyebrow="Most loved" title="Bestsellers" action={
+            <div className="flex gap-2">
+              <button type="button" onClick={() => scroll(-1)} aria-label="Scroll left" className="w-11 h-11 rounded-full border border-charcoal/30 grid place-items-center hover:bg-charcoal hover:text-cream transition-colors"><Icon name="ChevronLeft" size={20} /></button>
+              <button type="button" onClick={() => scroll(1)} aria-label="Scroll right" className="w-11 h-11 rounded-full border border-charcoal/30 grid place-items-center hover:bg-charcoal hover:text-cream transition-colors"><Icon name="ChevronRight" size={20} /></button>
+            </div>
+          } />
+        </Reveal>
+      </div>
+      <div className="wrap">
+        <div ref={ref} className="flex gap-4 lg:gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-2 -mx-1 px-1">
+          {items.map((p) => (
+            <div key={p.id} className="snap-start shrink-0 w-[68%] sm:w-[42%] md:w-[30%] lg:w-[23.4%]"><ProductCard p={p} /></div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function LookCard({ look }: { look: (typeof LOOKS)[number] }) {
+  const prods = look.pieces.map((x) => ({ ...x, p: byId(x.pid)! }));
+  const total = prods.reduce((a, x) => a + x.p.price, 0);
+  return (
+    <article className="group">
+      <a href={"#look-" + look.id} className="block aspect-[3/4] rounded-[14px] overflow-hidden zoom" aria-label={"Shop the look: " + look.name}>
+        <div className="w-full h-full zt"><Outfit tone={look.tone} pieces={prods.map((x) => ({ kind: x.p.kind, color: x.color }))} /></div>
+      </a>
+      <h3 className="font-display text-[1.9rem] mt-5 leading-tight">{look.name}</h3>
+      <p className="text-[14.5px] text-muted mt-1.5 leading-relaxed">{look.blurb}</p>
+      <ul className="mt-4 text-[13.5px] grid gap-1.5">
+        {prods.map((x) => <li key={x.pid} className="flex justify-between gap-4"><span>{x.p.name} <span className="text-muted">· {x.color}</span></span><span className="tabular-nums">{fmt(x.p.price)}</span></li>)}
+      </ul>
+      <div className="flex items-center justify-between mt-5 pt-4 border-t border-line">
+        <p className="text-[13.5px]">Full look <b className="tabular-nums ml-1">{fmt(total)}</b></p>
+        <a href={"#look-" + look.id} className="inline-flex items-center gap-2 text-[11.5px] tracking-[.16em] uppercase font-semibold link-u">Shop the Look <Icon name="ArrowRight" size={14} /></a>
+      </div>
+    </article>
+  );
+}
+
+function StyleYourWorkday() {
+  return (
+    <section className="wrap pt-24 lg:pt-32">
+      <Reveal><SectionHead eyebrow="Outfit ideas" title="Style Your Workday" /></Reveal>
+      <div className="grid md:grid-cols-3 gap-10 md:gap-6 lg:gap-10">
+        {LOOKS.map((l, i) => <Reveal key={l.id} delay={i * 100}><LookCard look={l} /></Reveal>)}
+      </div>
+    </section>
+  );
+}
+
+function PromoBanner() {
+  return (
+    <section className="mt-24 lg:mt-32 bg-sage">
+      <div className="wrap py-20 lg:py-28 text-center">
+        <Reveal>
+          <h2 className="font-display text-[clamp(2.4rem,6vw,5rem)] leading-[1.02] max-w-[820px] mx-auto text-balance">Feel Good. Look Confident. Every Day.</h2>
+          <p className="text-[17px] mt-5 text-charcoal/80">Discover workwear designed around your lifestyle.</p>
+          <a href="#shop" className="btn btn-light mt-9">Shop Now</a>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+function Reviews() {
+  return (
+    <section className="wrap pt-24 lg:pt-32">
+      <Reveal><SectionHead eyebrow="Kind words" title="Worn to work, loved by our customers." /></Reveal>
+      <div className="grid md:grid-cols-3 gap-5 lg:gap-8">
+        {REVIEWS.map((r, i) => (
+          <Reveal key={r.name} delay={i * 90}>
+            <figure className="bg-white rounded-[14px] p-7 lg:p-8 h-full flex flex-col">
+              <Stars n={r.stars} />
+              <blockquote className="font-display text-[1.45rem] leading-snug mt-5 flex-1">“{r.text}”</blockquote>
+              <figcaption className="mt-6 pt-5 border-t border-line text-[13.5px]">
+                <p className="font-semibold">{r.name}</p>
+                <p className="text-muted">Purchased: {r.product}</p>
+              </figcaption>
+            </figure>
+          </Reveal>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Newsletter() {
+  const [email, setEmail] = useState("");
+  const [state, setState] = useState<"idle" | "error" | "done">("idle");
+  const submit = (e: any) => {
+    e.preventDefault();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setState("error"); return; }
+    setState("done");
+    // Connect this to your email provider (Mailchimp, Klaviyo, Brevo…) when you go live.
+  };
+  return (
+    <section className="mt-24 lg:mt-32 bg-beige">
+      <div className="wrap py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
+        <Reveal>
+          <h2 className="font-display text-[clamp(2.2rem,4.6vw,3.8rem)] leading-[1.04]">Your Inbox, Styled.</h2>
+          <p className="text-[16.5px] text-charcoal/75 mt-4 max-w-[460px] leading-relaxed">Be the first to discover new collections, exclusive offers, and everyday style inspiration.</p>
+        </Reveal>
+        <Reveal delay={100}>
+          {state === "done" ? (
+            <div className="bg-white rounded-[14px] p-7 pop" role="status">
+              <p className="font-display text-[1.7rem]">Thank you.</p>
+              <p className="text-muted mt-1">{email} is on the list. Your first note is on its way.</p>
+            </div>
+          ) : (
+            <form onSubmit={submit} noValidate>
+              <label htmlFor="newsletter-email" className="sr-only">Email address</label>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <input id="newsletter-email" type="email" inputMode="email" autoComplete="email" placeholder="Your email address" value={email} onChange={(e: any) => { setEmail(e.target.value); setState("idle"); }} className={"field flex-1 " + (state === "error" ? "err" : "")} />
+                <button type="submit" className="btn btn-dark">Subscribe</button>
+              </div>
+              {state === "error" && <p className="text-[13px] text-[#9E3B2F] mt-2" role="alert">Please enter a valid email address.</p>}
+              <p className="text-[12px] text-muted mt-3">No spam. Unsubscribe whenever you like.</p>
+            </form>
+          )}
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+function HomePage() {
+  return (
+    <div>
+      <Hero />
+      <TrustStrip />
+      <CategoryCards />
+      <NewArrivals />
+      <BrandStory />
+      <Bestsellers />
+      <StyleYourWorkday />
+      <PromoBanner />
+      <Reviews />
+      <Newsletter />
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------
+//  14. SHOP
+// ---------------------------------------------------------------------
+const PRICE_BUCKETS = [
+  { id: "u3", label: "Under Rs. 3,000", test: (n: number) => n < 3000 },
+  { id: "m", label: "Rs. 3,000 – 4,000", test: (n: number) => n >= 3000 && n <= 4000 },
+  { id: "o4", label: "Over Rs. 4,000", test: (n: number) => n > 4000 },
+];
+const ALL_COLORS = Object.keys(SWATCH).filter((c) => PRODUCTS.some((p) => p.colors.includes(c)));
+
+function toggle<T>(arr: T[], v: T): T[] { return arr.includes(v) ? arr.filter((x) => x !== v) : [...arr, v]; }
+
+function FilterPanel({ f, setF, close }: { f: any; setF: (x: any) => void; close?: () => void }) {
+  return (
+    <div className="grid gap-9">
+      <div>
+        <h3 className="eyebrow mb-3 !text-charcoal">Price</h3>
+        <div className="flex flex-wrap gap-2">
+          {PRICE_BUCKETS.map((b) => <button key={b.id} type="button" className={"chip " + (f.price.includes(b.id) ? "on" : "")} aria-pressed={f.price.includes(b.id)} onClick={() => setF({ ...f, price: toggle(f.price, b.id) })}>{b.label}</button>)}
+        </div>
+      </div>
+      <div>
+        <h3 className="eyebrow mb-3 !text-charcoal">Size</h3>
+        <div className="flex flex-wrap gap-2">
+          {ALL_SIZES.map((z) => <button key={z} type="button" className={"chip " + (f.sizes.includes(z) ? "on" : "")} aria-pressed={f.sizes.includes(z)} onClick={() => setF({ ...f, sizes: toggle(f.sizes, z) })}>{z}</button>)}
+        </div>
+      </div>
+      <div>
+        <h3 className="eyebrow mb-3 !text-charcoal">Colour</h3>
+        <div className="flex flex-wrap gap-1 -ml-1">
+          {ALL_COLORS.map((c) => <Swatch key={c} color={c} size={28} on={f.colors.includes(c)} onClick={() => setF({ ...f, colors: toggle(f.colors, c) })} />)}
+        </div>
+        {f.colors.length > 0 && <p className="text-[12.5px] text-muted mt-2">{f.colors.join(", ")}</p>}
+      </div>
+      <div>
+        <label className="flex items-center gap-3 text-[14px] cursor-pointer min-h-[44px]">
+          <input type="checkbox" className="w-5 h-5 accent-[#292925]" checked={f.bestOnly} onChange={(e: any) => setF({ ...f, bestOnly: e.target.checked })} />
+          Bestsellers only
+        </label>
+      </div>
+      {close && <button type="button" className="btn btn-dark w-full" onClick={close}>Show results</button>}
+    </div>
+  );
+}
+
+function ShopPage({ route }: { route: string }) {
+  const s = useStore();
+  const preset = route === "new-arrivals" ? "new" : route === "bestsellers" ? "best" : null;
+  const cat = CATEGORIES.find((c) => c.route === route) || CATEGORIES[0];
+  const [f, setF] = useState<any>({ price: [], sizes: [], colors: [], bestOnly: false });
+  const [sort, setSort] = useState<string>(preset === "new" ? "newest" : preset === "best" ? "best" : "featured");
+  useEffect(() => { setSort(preset === "new" ? "newest" : preset === "best" ? "best" : "featured"); }, [route]);
+
+  const items = useMemo(() => {
+    let list = searchProducts(s.query);
+    if (cat.match) list = list.filter((p) => p.category === cat.match);
+    if (preset === "new") list = list.filter((p) => p.isNew);
+    if (preset === "best") list = list.filter((p) => p.best);
+    if (f.price.length) list = list.filter((p) => PRICE_BUCKETS.some((b) => f.price.includes(b.id) && b.test(p.price)));
+    if (f.sizes.length) list = list.filter((p) => f.sizes.some((z: Size) => p.sizes.includes(z)));
+    if (f.colors.length) list = list.filter((p) => f.colors.some((c: string) => p.colors.includes(c)));
+    if (f.bestOnly) list = list.filter((p) => p.best);
+    const sorted = [...list];
+    if (sort === "newest") sorted.sort((a, b) => b.added - a.added);
+    else if (sort === "low") sorted.sort((a, b) => a.price - b.price);
+    else if (sort === "high") sorted.sort((a, b) => b.price - a.price);
+    else if (sort === "best") sorted.sort((a, b) => Number(b.best) - Number(a.best) || b.added - a.added);
+    return sorted;
+  }, [s.query, cat.id, preset, f, sort]);
+
+  const activeCount = f.price.length + f.sizes.length + f.colors.length + (f.bestOnly ? 1 : 0);
+  const clear = () => { setF({ price: [], sizes: [], colors: [], bestOnly: false }); s.setQuery(""); };
+  const title = preset === "new" ? "New Arrivals" : preset === "best" ? "Bestsellers" : cat.label;
+
+  return (
+    <div className="wrap pt-10 lg:pt-16">
+      <nav className="text-[12.5px] text-muted mb-6" aria-label="Breadcrumb"><a href="#home" className="link-u">Home</a> / <span className="text-charcoal">{title}</span></nav>
+      <h1 className="font-display text-[clamp(2.6rem,6vw,4.6rem)] leading-none">{title}</h1>
+      <p className="text-muted mt-3 max-w-[520px]">Minimal, comfortable workwear designed in Sri Lanka.</p>
+
+      <div className="mt-8 flex gap-2 overflow-x-auto no-scrollbar -mx-1 px-1 pb-1">
+        {CATEGORIES.map((c) => <a key={c.id} href={"#" + c.route} className={"chip whitespace-nowrap flex items-center " + (!preset && c.id === cat.id ? "on" : "")}>{c.label}</a>)}
+      </div>
+
+      <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+        <div className="relative sm:w-[340px]">
+          <label htmlFor="shop-search" className="sr-only">Search products</label>
+          <Icon name="Search" size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-muted pointer-events-none" />
+          <input id="shop-search" className="field !pl-11 !pr-11" placeholder="Search products" value={s.query} onChange={(e: any) => s.setQuery(e.target.value)} />
+          {s.query && <button type="button" onClick={() => s.setQuery("")} aria-label="Clear search" className="absolute right-1 top-1/2 -translate-y-1/2 w-11 h-11 grid place-items-center"><Icon name="X" size={16} /></button>}
+        </div>
+        <div className="flex gap-3 items-center">
+          <button type="button" className="btn btn-line lg:hidden flex-1 sm:flex-none" onClick={() => s.set({ filters: true })}><Icon name="SlidersHorizontal" size={16} /> Filters{activeCount ? " (" + activeCount + ")" : ""}</button>
+          <div className="flex-1 sm:flex-none">
+            <label htmlFor="sort" className="sr-only">Sort by</label>
+            <select id="sort" className="field sm:w-[230px]" value={sort} onChange={(e: any) => setSort(e.target.value)}>
+              <option value="featured">Sort: Featured</option>
+              <option value="newest">Newest</option>
+              <option value="low">Price: Low to High</option>
+              <option value="high">Price: High to Low</option>
+              <option value="best">Bestselling</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-10 grid lg:grid-cols-[250px_1fr] gap-12">
+        <aside className="hidden lg:block sticky self-start" style={{ top: "calc(env(safe-area-inset-top,0px) + 100px)" }} aria-label="Filters"><FilterPanel f={f} setF={setF} /></aside>
+        <div>
+          <div className="flex items-center justify-between mb-6 text-[13.5px] text-muted">
+            <p aria-live="polite">{items.length} {items.length === 1 ? "piece" : "pieces"}</p>
+            {(activeCount > 0 || s.query) && <button type="button" onClick={clear} className="underline underline-offset-4 text-charcoal">Clear all</button>}
+          </div>
+          {items.length === 0 ? (
+            <div className="text-center py-20 bg-white/60 rounded-[14px]">
+              <h2 className="font-display text-[2rem]">Nothing matches just yet</h2>
+              <p className="text-muted mt-2">Try removing a filter or searching for something else.</p>
+              <button type="button" className="btn btn-dark mt-6" onClick={clear}>Clear filters</button>
+            </div>
+          ) : <ProductGrid items={items} cols="grid-cols-2 md:grid-cols-3" />}
+        </div>
+      </div>
+
+      <Panel open={s.ui.filters} onClose={() => s.set({ filters: false })} side="left" label="Filters">
+        <div className="flex items-center justify-between px-5 h-[64px] border-b border-line shrink-0">
+          <h2 className="font-display text-[1.7rem]">Filters</h2>
+          <button type="button" className="w-11 h-11 -mr-2 grid place-items-center" onClick={() => s.set({ filters: false })} aria-label="Close filters"><Icon name="X" size={22} /></button>
+        </div>
+        <div className="flex-1 overflow-y-auto p-5"><FilterPanel f={f} setF={setF} close={() => s.set({ filters: false })} /></div>
+      </Panel>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------
+//  15. PRODUCT PAGE
+// ---------------------------------------------------------------------
+function Accordion({ title, children, open = false }: { title: string; children: any; open?: boolean }) {
+  return (
+    <details className="group border-t border-line last:border-b" open={open}>
+      <summary className="flex items-center justify-between h-14 cursor-pointer list-none text-[14px] font-semibold">
+        {title}<Icon name="ChevronDown" size={18} className="transition-transform duration-300 group-open:rotate-180" />
+      </summary>
+      <div className="pb-5 text-[14.5px] text-charcoal/80 leading-relaxed">{children}</div>
+    </details>
+  );
+}
+
+function ProductPage({ id }: { id: string }) {
+  const s = useStore();
+  const p = byId(id);
+  const [color, setColor] = useState(p ? p.colors[0] : "");
+  const [size, setSize] = useState<Size | "">("");
+  const [qty, setQty] = useState(1);
+  const [view, setView] = useState("front");
+  const [err, setErr] = useState(false);
+  const sizeRef = useRef<HTMLDivElement>(null);
+  useEffect(() => { if (p) { setColor(p.colors[0]); setSize(""); setQty(1); setView("front"); setErr(false); } }, [id]);
+
+  if (!p) return <NotFound />;
+  const wished = s.wishlist.includes(p.id);
+  const views = [["front", "Front"], ["detail", "Detail"], ["lifestyle", "Styled"], ["back", "Back"]];
+  const related = PRODUCTS.filter((x) => x.id !== p.id && x.category === p.category).concat(PRODUCTS.filter((x) => x.id !== p.id && x.category !== p.category)).slice(0, 4);
+
+  const need = () => { setErr(true); if (sizeRef.current) sizeRef.current.scrollIntoView({ behavior: "smooth", block: "center" }); };
+  const add = () => { if (!size) return need(); s.addToCart(p.id, color, size as Size, qty); };
+  const buyNow = () => { if (!size) return need(); s.addToCart(p.id, color, size as Size, qty, false); location.hash = "checkout"; };
+
+  return (
+    <div className="pb-24 lg:pb-0">
+      <div className="wrap pt-8 lg:pt-12">
+        <nav className="text-[12.5px] text-muted mb-6" aria-label="Breadcrumb">
+          <a href="#home" className="link-u">Home</a> / <a href="#shop" className="link-u">Shop</a> / <a href={"#" + (CATEGORIES.find((c) => c.match === p.category) || CATEGORIES[0]).route} className="link-u">{p.category}</a> / <span className="text-charcoal">{p.name}</span>
+        </nav>
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-14">
+          <div className="lg:col-span-7 grid lg:grid-cols-[84px_1fr] gap-3 lg:gap-4 items-start">
+            <div className="order-2 lg:order-1 flex lg:flex-col gap-3">
+              {views.map(([v, label]) => (
+                <button key={v} type="button" onClick={() => setView(v)} aria-label={"Show " + label + " view"} aria-pressed={view === v}
+                  className={"w-[22%] lg:w-full aspect-[3/4] rounded-lg overflow-hidden border-2 transition-colors " + (view === v ? "border-charcoal" : "border-transparent")}>
+                  <ProductImage p={p} color={color} view={v} />
+                </button>
+              ))}
+            </div>
+            <div className="order-1 lg:order-2 aspect-[3/4] rounded-[14px] overflow-hidden bg-softgray zoom">
+              <div key={view + color} className="w-full h-full zt fade"><ProductImage p={p} color={color} view={view} /></div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-5 lg:sticky lg:self-start" style={{ top: "calc(env(safe-area-inset-top,0px) + 100px)" }}>
+            <div className="flex items-center gap-3">
+              <p className="eyebrow">{p.category}</p>
+              {p.isNew && <span className="bg-sage/40 text-[10.5px] tracking-[.16em] uppercase font-semibold px-2.5 py-1 rounded-full">New Arrival</span>}
+            </div>
+            <div className="flex items-start justify-between gap-4 mt-3">
+              <h1 className="font-display text-[clamp(2.2rem,4vw,3.2rem)] leading-[1.04] text-balance">{p.name}</h1>
+              <button type="button" onClick={() => s.toggleWish(p.id)} aria-pressed={wished} aria-label={wished ? "Remove from wishlist" : "Add to wishlist"} className="w-12 h-12 shrink-0 rounded-full border border-line grid place-items-center hover:bg-white"><Icon name="Heart" size={20} className={wished ? "fill-charcoal" : ""} /></button>
+            </div>
+            <p className="text-[22px] mt-3 tabular-nums">{fmt(p.price)}</p>
+            <p className="text-[15.5px] text-charcoal/75 leading-relaxed mt-5">{p.description}</p>
+
+            <p className="text-[13px] mt-7 mb-2"><span className="font-semibold">Colour:</span> {color}</p>
+            <div className="flex -ml-[3px]">{p.colors.map((c) => <Swatch key={c} color={c} on={c === color} onClick={() => setColor(c)} size={30} />)}</div>
+
+            <div ref={sizeRef} className={"mt-7 " + (err ? "shake" : "")}>
+              <div className="flex items-center justify-between mb-2">
+                <p className="text-[13px]"><span className="font-semibold">Size:</span> {size || "Select a size"}</p>
+                <button type="button" className="inline-flex items-center gap-1.5 text-[12.5px] underline underline-offset-4" onClick={() => s.set({ sizeGuide: true })}><Icon name="Ruler" size={15} /> Size guide</button>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {ALL_SIZES.map((z) => <button key={z} type="button" disabled={!p.sizes.includes(z)} className={"chip !min-w-[56px] " + (size === z ? "on" : "")} aria-pressed={size === z} onClick={() => { setSize(z); setErr(false); }}>{z}</button>)}
+              </div>
+              {err && <p className="text-[13px] text-[#9E3B2F] mt-2" role="alert">Please choose a size to continue.</p>}
+            </div>
+
+            <div className="flex gap-3 mt-7">
+              <Qty qty={qty} setQty={setQty} />
+              <button type="button" className="btn btn-dark flex-1" onClick={add}>Add to Cart</button>
+            </div>
+            <button type="button" className="btn btn-line w-full mt-3" onClick={buyNow}>Buy Now</button>
+
+            <ul className="mt-7 grid gap-3 text-[13.5px]">
+              <li className="flex gap-3"><Icon name="Truck" size={19} className="shrink-0 mt-0.5" /><span>Islandwide delivery in 2–4 working days. Free over {fmt(CONFIG.freeDeliveryOver)}.</span></li>
+              <li className="flex gap-3"><Icon name="RotateCcw" size={19} className="shrink-0 mt-0.5" /><span>Easy exchanges within 7 days of delivery.</span></li>
+            </ul>
+
+            <div className="mt-8">
+              <Accordion title="Product details" open><ul className="list-disc pl-5 grid gap-1.5">{p.details.map((d) => <li key={d}>{d}</li>)}</ul></Accordion>
+              <Accordion title="Fabric &amp; care"><p>{p.fabric}</p></Accordion>
+              <Accordion title="Model sizing"><p>{MODEL_INFO} If you are between sizes, we suggest sizing up for a relaxed fit.</p></Accordion>
+              <Accordion title="Delivery information"><p>Colombo and suburbs: 1–2 working days. Other districts: 2–4 working days. Delivery is {fmt(CONFIG.deliveryFee)}, and free on orders over {fmt(CONFIG.freeDeliveryOver)}. Cash on delivery is available islandwide.</p></Accordion>
+              <Accordion title="Return information"><p>Exchange or return unworn items with tags attached within 7 days of delivery. Contact us on WhatsApp or by email and we will arrange a pickup.</p></Accordion>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section className="wrap pt-24">
+        <SectionHead eyebrow="Pairs well with" title="You may also like" />
+        <ProductGrid items={related} />
+      </section>
+
+      <div className="lg:hidden fixed inset-x-0 bottom-0 z-40 bg-white border-t border-line flex items-center gap-4 pt-3" style={{ paddingBottom: "calc(env(safe-area-inset-bottom,0px) + 12px)", paddingLeft: "max(16px,env(safe-area-inset-left,0px))", paddingRight: "max(16px,env(safe-area-inset-right,0px))" }}>
+        <div className="min-w-0">
+          <p className="text-[13px] truncate">{p.name}</p>
+          <p className="text-[15px] font-semibold tabular-nums">{fmt(p.price * qty)}</p>
+        </div>
+        <button type="button" className="btn btn-dark flex-1" onClick={add}>{size ? "Add to Cart" : "Select Size"}</button>
+      </div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------
+//  16. CHECKOUT
+// ---------------------------------------------------------------------
+function OrderSummary({ compact = false }: { compact?: boolean }) {
+  const s = useStore();
+  return (
+    <div>
+      <ul className="grid gap-4">
+        {s.cart.map((l: CartLine) => {
+          const p = byId(l.id)!;
+          return (
+            <li key={lineKey(l)} className="flex gap-4 items-center">
+              <div className="relative w-16 shrink-0 aspect-[3/4] rounded-md overflow-hidden bg-softgray">
+                <ProductImage p={p} color={l.color} />
+                <span className="absolute -top-0 -right-0 min-w-[20px] h-5 px-1 bg-charcoal text-cream text-[11px] grid place-items-center rounded-bl-md tabular-nums">{l.qty}</span>
+              </div>
+              <div className="flex-1 min-w-0"><p className="text-[14px] leading-snug">{p.name}</p><p className="text-[12.5px] text-muted">{l.color} · {l.size}</p></div>
+              <p className="text-[14px] tabular-nums">{fmt(p.price * l.qty)}</p>
+            </li>
+          );
+        })}
+      </ul>
+      <dl className="mt-6 pt-5 border-t border-line text-[14px] grid gap-2 tabular-nums">
+        <div className="flex justify-between"><dt className="text-muted">Subtotal</dt><dd>{fmt(s.totals.subtotal)}</dd></div>
+        <div className="flex justify-between"><dt className="text-muted">Delivery</dt><dd>{s.totals.delivery === 0 ? "Free" : fmt(s.totals.delivery)}</dd></div>
+        <div className="flex justify-between text-[18px] font-semibold pt-3 mt-1 border-t border-line"><dt>Total</dt><dd>{fmt(s.totals.total)}</dd></div>
+      </dl>
+    </div>
+  );
+}
+
+function Field({ id, label, error, children }: { id: string; label: string; error?: string; children: any }) {
+  return (
+    <div>
+      <label htmlFor={id} className="block text-[12.5px] mb-1.5 font-medium">{label}</label>
+      {children}
+      {error && <p className="text-[12.5px] text-[#9E3B2F] mt-1.5" role="alert">{error}</p>}
+    </div>
+  );
+}
+
+function CheckoutPage() {
+  const s = useStore();
+  const c: Customer = s.customer;
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [busy, setBusy] = useState(false);
+  const up = (k: keyof Customer, v: string) => { s.setCustomer({ ...c, [k]: v }); if (errors[k]) setErrors({ ...errors, [k]: "" }); };
+
+  if (s.cart.length === 0) {
+    return (
+      <div className="wrap py-24 text-center">
+        <h1 className="font-display text-[3rem]">Your bag is empty</h1>
+        <p className="text-muted mt-3">Add a few pieces before checking out.</p>
+        <a href="#shop" className="btn btn-dark mt-8">Continue shopping</a>
+      </div>
+    );
+  }
+
+  const validate = () => {
+    const e: Record<string, string> = {};
+    if (c.name.trim().length < 2) e.name = "Please enter your full name.";
+    if (!/^(?:\+94|0)?7\d{8}$/.test(c.phone.replace(/[\s-]/g, ""))) e.phone = "Enter a valid Sri Lankan mobile number, e.g. 077 123 4567.";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c.email)) e.email = "Please enter a valid email address.";
+    if (c.address.trim().length < 5) e.address = "Please enter your delivery address.";
+    if (!c.city.trim()) e.city = "Please enter your city.";
+    if (!c.district) e.district = "Please choose a district.";
+    if (!/^\d{5}$/.test(c.postal.trim())) e.postal = "Enter a 5-digit postal code.";
+    setErrors(e);
+    return e;
+  };
+
+  const submit = async (ev: any) => {
+    ev.preventDefault();
+    const e = validate();
+    const first = Object.keys(e)[0];
+    if (first) { const el = document.getElementById("co-" + first); if (el) el.focus(); return; }
+    setBusy(true);
+    const order = {
+      customer: c, items: s.cart, subtotal: s.totals.subtotal, delivery: s.totals.delivery, total: s.totals.total, payment: c.payment,
+    };
+    const res = await PaymentGateway.createOrder(order);
+    const placed = { ...order, orderId: res.orderId, status: res.status, placedAt: new Date().toISOString() };
+    save("elan_last_order_v1", placed);
+    s.setLastOrder(placed);
+    s.clearCart();
+    setBusy(false);
+    location.hash = "order-confirmed";
+  };
+
+  const msg = buildWhatsAppMessage(s.cart, c, s.totals.subtotal, s.totals.delivery);
+
+  return (
+    <div className="wrap pt-10 lg:pt-16">
+      <h1 className="font-display text-[clamp(2.6rem,6vw,4.4rem)] leading-none">Checkout</h1>
+      <p className="text-muted mt-3 flex items-center gap-2"><Icon name="Lock" size={15} /> Demo checkout. No payment is taken on this site.</p>
+      <form onSubmit={submit} noValidate className="mt-10 grid lg:grid-cols-[1fr_430px] gap-10 lg:gap-16 items-start">
+        <div className="grid gap-10">
+          <section aria-labelledby="h-contact">
+            <h2 id="h-contact" className="font-display text-[1.9rem] mb-5">Contact</h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="sm:col-span-2"><Field id="co-name" label="Full name" error={errors.name}><input id="co-name" className={"field " + (errors.name ? "err" : "")} autoComplete="name" value={c.name} onChange={(e: any) => up("name", e.target.value)} /></Field></div>
+              <Field id="co-phone" label="Phone number" error={errors.phone}><input id="co-phone" type="tel" inputMode="tel" placeholder="077 123 4567" className={"field " + (errors.phone ? "err" : "")} autoComplete="tel" value={c.phone} onChange={(e: any) => up("phone", e.target.value)} /></Field>
+              <Field id="co-email" label="Email" error={errors.email}><input id="co-email" type="email" inputMode="email" className={"field " + (errors.email ? "err" : "")} autoComplete="email" value={c.email} onChange={(e: any) => up("email", e.target.value)} /></Field>
+            </div>
+          </section>
+
+          <section aria-labelledby="h-delivery">
+            <h2 id="h-delivery" className="font-display text-[1.9rem] mb-5">Delivery</h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="sm:col-span-2"><Field id="co-address" label="Delivery address" error={errors.address}><input id="co-address" className={"field " + (errors.address ? "err" : "")} autoComplete="street-address" value={c.address} onChange={(e: any) => up("address", e.target.value)} /></Field></div>
+              <Field id="co-city" label="City" error={errors.city}><input id="co-city" className={"field " + (errors.city ? "err" : "")} autoComplete="address-level2" value={c.city} onChange={(e: any) => up("city", e.target.value)} /></Field>
+              <Field id="co-district" label="District" error={errors.district}>
+                <select id="co-district" className={"field " + (errors.district ? "err" : "")} value={c.district} onChange={(e: any) => up("district", e.target.value)}>
+                  <option value="">Select district</option>
+                  {DISTRICTS.map((d) => <option key={d}>{d}</option>)}
+                </select>
+              </Field>
+              <Field id="co-postal" label="Postal code" error={errors.postal}><input id="co-postal" inputMode="numeric" maxLength={5} className={"field " + (errors.postal ? "err" : "")} autoComplete="postal-code" value={c.postal} onChange={(e: any) => up("postal", e.target.value.replace(/\D/g, ""))} /></Field>
+              <div className="sm:col-span-2"><Field id="co-notes" label="Order notes (optional)"><textarea id="co-notes" rows={3} className="field !h-auto py-3" placeholder="Delivery instructions, preferred call time…" value={c.notes} onChange={(e: any) => up("notes", e.target.value)} /></Field></div>
+            </div>
+          </section>
+
+          <section aria-labelledby="h-pay">
+            <h2 id="h-pay" className="font-display text-[1.9rem] mb-5">Payment</h2>
+            <div className="grid gap-3" role="radiogroup" aria-label="Payment method">
+              {([["cod", "Cash on Delivery", "Pay in cash when your order arrives."], ["bank", "Bank Transfer", "Transfer to our account and send the receipt on WhatsApp."]] as const).map(([v, t, d]) => (
+                <label key={v} className={"flex gap-4 items-start p-4 rounded-[10px] border cursor-pointer transition-colors " + (c.payment === v ? "border-charcoal bg-white" : "border-line hover:border-charcoal/50")}>
+                  <input type="radio" name="payment" className="mt-1 w-5 h-5 accent-[#292925]" checked={c.payment === v} onChange={() => up("payment", v)} />
+                  <span><span className="block font-medium text-[14.5px]">{t}</span><span className="block text-[13.5px] text-muted mt-0.5">{d}</span></span>
+                </label>
+              ))}
+            </div>
+            {c.payment === "bank" && (
+              <dl className="mt-4 p-5 rounded-[10px] bg-beige text-[14px] grid grid-cols-[auto_1fr] gap-x-6 gap-y-1.5 pop">
+                <dt className="text-muted">Bank</dt><dd>{CONFIG.bank.bank}</dd>
+                <dt className="text-muted">Account name</dt><dd>{CONFIG.bank.accountName}</dd>
+                <dt className="text-muted">Account no.</dt><dd className="select-all">{CONFIG.bank.accountNumber}</dd>
+                <dt className="text-muted">Branch</dt><dd>{CONFIG.bank.branch}</dd>
+              </dl>
+            )}
+          </section>
+        </div>
+
+        <aside className="lg:sticky self-start bg-white rounded-[14px] p-6 lg:p-8" style={{ top: "calc(env(safe-area-inset-top,0px) + 96px)" }} aria-label="Order summary">
+          <h2 className="font-display text-[1.9rem] mb-5">Order summary</h2>
+          <OrderSummary />
+          <button type="submit" disabled={busy} className="btn btn-dark w-full mt-6">{busy ? "Placing order…" : "Place Order"}</button>
+          <div className="flex items-center gap-3 my-4 text-[12px] text-muted"><span className="flex-1 h-px bg-line" />or<span className="flex-1 h-px bg-line" /></div>
+          <a href={waLink(msg)} target="_blank" rel="noopener noreferrer" className="btn btn-line w-full"><Icon name="MessageCircle" size={17} /> Order via WhatsApp</a>
+          <details className="mt-4 text-[13px]">
+            <summary className="cursor-pointer text-muted">Preview WhatsApp message</summary>
+            <pre className="mt-2 p-3 bg-cream rounded-lg whitespace-pre-wrap text-[12px] leading-relaxed font-sans">{msg}</pre>
+          </details>
+          <a href="#shop" className="block text-center text-[13px] underline underline-offset-4 mt-5">Continue shopping</a>
+        </aside>
+      </form>
+    </div>
+  );
+}
+
+function ConfirmationPage() {
+  const s = useStore();
+  const o = s.lastOrder;
+  if (!o) return <div className="wrap py-24 text-center"><h1 className="font-display text-[3rem]">No recent order</h1><a href="#shop" className="btn btn-dark mt-8">Start shopping</a></div>;
+  const msg = buildWhatsAppMessage(o.items, o.customer, o.subtotal, o.delivery) + "\n\nOrder ref: " + o.orderId;
+  return (
+    <div className="wrap py-16 lg:py-24 max-w-[760px]">
+      <div className="w-14 h-14 rounded-full bg-sage grid place-items-center"><Icon name="Check" size={26} sw={2} /></div>
+      <p className="eyebrow mt-8">Order {o.orderId}</p>
+      <h1 className="font-display text-[clamp(2.6rem,6vw,4.4rem)] leading-none mt-3">Thank you, {o.customer.name.split(" ")[0]}.</h1>
+      <p className="text-[16px] text-charcoal/75 mt-5 leading-relaxed">
+        {o.payment === "bank"
+          ? "Please transfer " + fmt(o.total) + " to the account below and send your receipt on WhatsApp. We will dispatch once it is confirmed."
+          : "Your order will be delivered to " + o.customer.city + " within 2–4 working days. Please keep " + fmt(o.total) + " ready in cash."}
+      </p>
+      <p className="text-[13px] text-muted mt-3">This is a demo order. No payment was taken and nothing has been sent to a real store.</p>
+      <div className="bg-white rounded-[14px] p-6 lg:p-8 mt-10">
+        <ul className="grid gap-4">
+          {o.items.map((l: CartLine) => { const p = byId(l.id); if (!p) return null; return (
+            <li key={lineKey(l)} className="flex justify-between gap-4 text-[14.5px]"><span>{p.name}<span className="block text-[12.5px] text-muted">{l.color} · {l.size} · Qty {l.qty}</span></span><span className="tabular-nums">{fmt(p.price * l.qty)}</span></li>
+          ); })}
+        </ul>
+        <dl className="mt-5 pt-4 border-t border-line text-[14px] grid gap-1.5 tabular-nums">
+          <div className="flex justify-between"><dt className="text-muted">Subtotal</dt><dd>{fmt(o.subtotal)}</dd></div>
+          <div className="flex justify-between"><dt className="text-muted">Delivery</dt><dd>{o.delivery === 0 ? "Free" : fmt(o.delivery)}</dd></div>
+          <div className="flex justify-between font-semibold text-[16px]"><dt>Total</dt><dd>{fmt(o.total)}</dd></div>
+        </dl>
+        <p className="text-[13.5px] text-muted mt-5">Delivering to: {[o.customer.address, o.customer.city, o.customer.district, o.customer.postal].filter(Boolean).join(", ")}</p>
+      </div>
+      <div className="flex flex-col sm:flex-row gap-3 mt-8">
+        <a href={waLink(msg)} target="_blank" rel="noopener noreferrer" className="btn btn-dark"><Icon name="MessageCircle" size={17} /> Confirm on WhatsApp</a>
+        <a href="#shop" className="btn btn-line">Continue shopping</a>
+      </div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------
+//  17. OTHER PAGES
+// ---------------------------------------------------------------------
+function WishlistPage() {
+  const s = useStore();
+  const items = PRODUCTS.filter((p) => s.wishlist.includes(p.id));
+  return (
+    <div className="wrap pt-10 lg:pt-16">
+      <h1 className="font-display text-[clamp(2.6rem,6vw,4.6rem)] leading-none">Wishlist</h1>
+      <p className="text-muted mt-3">{items.length ? items.length + " saved " + (items.length === 1 ? "piece" : "pieces") : "Pieces you save will be waiting here."}</p>
+      <div className="mt-10">
+        {items.length ? <ProductGrid items={items} /> : (
+          <div className="text-center py-20 bg-white/60 rounded-[14px]">
+            <div className="mx-auto w-16 h-16 rounded-full bg-beige grid place-items-center mb-5"><Icon name="Heart" size={26} /></div>
+            <h2 className="font-display text-[2rem]">Nothing saved yet</h2>
+            <p className="text-muted mt-2">Tap the heart on any piece to save it.</p>
+            <a href="#shop" className="btn btn-dark mt-6">Browse the collection</a>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function CollectionsPage() {
+  const cards = [
+    { title: "Office Blouses", kind: "blouse" as Kind, color: "Ivory", tone: 0, route: "shop-blouses" },
+    { title: "Comfortable Trousers", kind: "wide" as Kind, color: "Sand", tone: 1, route: "shop-trousers" },
+    { title: "Midi Dresses", kind: "dress" as Kind, color: "Sage", tone: 2, route: "shop-dresses" },
+    { title: "Everyday Essentials", kind: "blazer" as Kind, color: "Oat", tone: 3, route: "office-essentials" },
+  ];
+  return (
+    <div className="wrap pt-10 lg:pt-16">
+      <h1 className="font-display text-[clamp(2.6rem,6vw,4.6rem)] leading-none">Collections</h1>
+      <p className="text-muted mt-3 max-w-[520px]">Outfits built around the way you work, and the categories to build your own.</p>
+      <h2 className="font-display text-[2rem] mt-14 mb-8">Style your workday</h2>
+      <div className="grid md:grid-cols-3 gap-10 md:gap-6 lg:gap-10">{LOOKS.map((l) => <LookCard key={l.id} look={l} />)}</div>
+      <h2 className="font-display text-[2rem] mt-20 mb-8">Shop by category</h2>
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+        {cards.map((c) => (
+          <a key={c.title} href={"#" + c.route} className="group block">
+            <div className="aspect-[3/4] rounded-[14px] overflow-hidden zoom"><div className="w-full h-full zt"><Garment kind={c.kind} color={c.color} tone={c.tone} /></div></div>
+            <h3 className="font-display text-[1.5rem] mt-4 leading-tight">{c.title}</h3>
+            <span className="inline-flex items-center gap-2 mt-1.5 text-[11.5px] tracking-[.16em] uppercase font-semibold link-u">Shop Now <Icon name="ArrowRight" size={14} /></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function LookPage({ id }: { id: string }) {
+  const s = useStore();
+  const look = LOOKS.find((l) => l.id === id);
+  const [size, setSize] = useState<Size | "">("");
+  const [err, setErr] = useState(false);
+  if (!look) return <NotFound />;
+  const prods = look.pieces.map((x) => ({ ...x, p: byId(x.pid)! }));
+  const total = prods.reduce((a, x) => a + x.p.price, 0);
+  const addAll = () => {
+    if (!size) { setErr(true); return; }
+    prods.forEach((x, i) => s.addToCart(x.pid, x.color, size as Size, 1, i === prods.length - 1));
+  };
+  return (
+    <div className="wrap pt-10 lg:pt-16">
+      <nav className="text-[12.5px] text-muted mb-6" aria-label="Breadcrumb"><a href="#home" className="link-u">Home</a> / <a href="#collections" className="link-u">Collections</a> / <span className="text-charcoal">{look.name}</span></nav>
+      <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+        <div className="aspect-[3/4] max-w-[560px] w-full mx-auto lg:mx-0 rounded-[14px] overflow-hidden">
+          <Outfit tone={look.tone} pieces={prods.map((x) => ({ kind: x.p.kind, color: x.color }))} />
+        </div>
+        <div>
+          <p className="eyebrow">Shop the look</p>
+          <h1 className="font-display text-[clamp(2.6rem,6vw,4.6rem)] leading-none mt-3">{look.name}</h1>
+          <p className="text-[16.5px] text-charcoal/75 mt-5 leading-relaxed max-w-[480px]">{look.blurb}</p>
+          <ul className="mt-8 grid gap-3">
+            {prods.map((x) => (
+              <li key={x.pid}><a href={"#product-" + x.pid} className="flex items-center gap-4 p-3 bg-white rounded-[12px] hover:shadow-md transition-shadow">
+                <span className="w-14 aspect-[3/4] rounded-md overflow-hidden block"><ProductImage p={x.p} color={x.color} /></span>
+                <span className="flex-1 text-[14.5px]">{x.p.name}<span className="block text-[12.5px] text-muted">{x.color}</span></span>
+                <span className="tabular-nums text-[14px]">{fmt(x.p.price)}</span>
+              </a></li>
+            ))}
+          </ul>
+          <div className="mt-8">
+            <p className="text-[13px] mb-2"><span className="font-semibold">Size for all pieces:</span> {size || "Select"}</p>
+            <div className="flex flex-wrap gap-2">{ALL_SIZES.map((z) => <button key={z} type="button" className={"chip " + (size === z ? "on" : "")} aria-pressed={size === z} onClick={() => { setSize(z); setErr(false); }}>{z}</button>)}</div>
+            {err && <p className="text-[13px] text-[#9E3B2F] mt-2" role="alert">Please choose a size.</p>}
+            <p className="text-[12.5px] text-muted mt-2">You can change the size of each piece in your bag.</p>
+          </div>
+          <button type="button" className="btn btn-dark mt-6 w-full sm:w-auto" onClick={addAll}>Add the full look · {fmt(total)}</button>
+        </div>
+      </div>
+      <section className="pt-24">
+        <SectionHead eyebrow="The pieces" title="Shop each piece" />
+        <ProductGrid items={prods.map((x) => x.p)} cols="grid-cols-2 md:grid-cols-3 lg:grid-cols-4" />
+      </section>
+    </div>
+  );
+}
+
+function AboutPage() {
+  const values = [
+    ["Comfort first", "Soft stretch, breathable fabrics and easy cuts, because Colombo is warm and your day is long."],
+    ["Quietly polished", "Clean lines and a calm palette, so each piece works with the rest of your wardrobe."],
+    ["Fairly priced", "Premium in feel and honest in price, with no seasonal markups."],
+  ];
+  return (
+    <div>
+      <section className="bg-beige">
+        <div className="wrap py-16 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="eyebrow">About us</p>
+            <h1 className="font-display text-[clamp(2.8rem,6.6vw,5.4rem)] leading-[.98] mt-4 text-balance">Made for Your Everyday Ambition.</h1>
+            <p className="text-[17px] text-charcoal/75 mt-6 leading-relaxed max-w-[520px]">{CONFIG.brand.name} began with a simple frustration: workwear that looked good on a hanger but felt wrong by lunchtime. We design for women who work, commute and lead in Sri Lanka, and we cut every piece to move with you.</p>
+          </div>
+          <div className="aspect-[4/5] max-w-[480px] w-full mx-auto lg:ml-auto rounded-t-[999px] rounded-b-[14px] overflow-hidden"><Outfit tone={2} arch={false} pieces={[{ kind: "dress", color: "Sage" }]} /></div>
+        </div>
+      </section>
+      <section className="wrap py-20 lg:py-28">
+        <div className="grid md:grid-cols-3 gap-10">
+          {values.map(([t, d]) => <div key={t} className="border-t border-charcoal pt-5"><h2 className="font-display text-[1.9rem]">{t}</h2><p className="text-[15px] text-charcoal/75 mt-3 leading-relaxed">{d}</p></div>)}
+        </div>
+        <div className="mt-20 text-center">
+          <p className="font-display text-[clamp(1.8rem,3.4vw,2.8rem)] italic">{CONFIG.brand.tagline}</p>
+          <a href="#shop" className="btn btn-dark mt-8">Shop the Collection</a>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function ContactPage() {
+  const faqs = [
+    ["How long does delivery take?", "Colombo and suburbs take 1–2 working days. Other districts take 2–4 working days."],
+    ["Can I exchange an item?", "Yes. Unworn items with tags attached can be exchanged within 7 days of delivery."],
+    ["How do I choose my size?", "Open the size guide on any product page. If you are between sizes, size up for a relaxed fit."],
+    ["Can I order on WhatsApp?", "Yes. Use the Order via WhatsApp button in your bag or at checkout and your order is written for you."],
+  ];
+  return (
+    <div className="wrap pt-10 lg:pt-16 max-w-[1000px]">
+      <h1 className="font-display text-[clamp(2.6rem,6vw,4.6rem)] leading-none">Contact</h1>
+      <p className="text-muted mt-3">We reply within one working day.</p>
+      <div className="grid md:grid-cols-2 gap-10 mt-10">
+        <ul className="grid gap-5 text-[15px]">
+          <li className="flex gap-4"><Icon name="MapPin" size={20} className="mt-0.5 shrink-0" /><span>{CONFIG.contact.address}</span></li>
+          <li className="flex gap-4"><Icon name="Phone" size={20} className="mt-0.5 shrink-0" /><span className="select-all">{CONFIG.contact.phone}</span></li>
+          <li className="flex gap-4"><Icon name="Mail" size={20} className="mt-0.5 shrink-0" /><span className="select-all">{CONFIG.contact.email}</span></li>
+          <li className="flex gap-4"><Icon name="Clock" size={20} className="mt-0.5 shrink-0" /><span>{CONFIG.contact.hours}</span></li>
+          <li><a href={"https://wa.me/" + CONFIG.whatsappNumber} target="_blank" rel="noopener noreferrer" className="btn btn-dark"><Icon name="MessageCircle" size={17} /> Chat on WhatsApp</a></li>
+        </ul>
+        <div>{faqs.map(([q, a], i) => <Accordion key={q} title={q} open={i === 0}><p>{a}</p></Accordion>)}</div>
+      </div>
+    </div>
+  );
+}
+
+const POLICIES: Record<string, { title: string; body: string[] }> = {
+  "policy-privacy": { title: "Privacy Policy", body: [
+    "We collect only what we need to process your order: your name, contact details and delivery address. We use them to deliver your order and to contact you about it.",
+    "We never sell your information. Your bag and wishlist are stored on your own device.",
+    "To ask what we hold about you, or to have it removed, email " + CONFIG.contact.email + ".",
+    "This is sample policy text. Replace it with wording reviewed for your business before launch.",
+  ] },
+  "policy-returns": { title: "Return Policy", body: [
+    "You may exchange or return unworn items with tags attached within 7 days of delivery.",
+    "Contact us on WhatsApp or by email with your order number and we will arrange a pickup. Exchanges are free for the first order.",
+    "Items that are worn, washed or altered cannot be returned. Refunds go to the original payment method, or by bank transfer for cash-on-delivery orders.",
+    "This is sample policy text. Replace it with wording reviewed for your business before launch.",
+  ] },
+  "policy-shipping": { title: "Shipping Policy", body: [
+    "We deliver islandwide. Colombo and suburbs take 1–2 working days; other districts take 2–4 working days.",
+    "Delivery costs " + fmt(CONFIG.deliveryFee) + " and is free on orders over " + fmt(CONFIG.freeDeliveryOver) + ".",
+    "Cash on delivery is available across Sri Lanka. You will receive a call or message from our courier before delivery.",
+    "This is sample policy text. Replace it with wording reviewed for your business before launch.",
+  ] },
+  "policy-terms": { title: "Terms & Conditions", body: [
+    "By placing an order you agree to provide accurate details and to accept delivery at the address you give.",
+    "Prices are in Sri Lankan Rupees and may change without notice. An order is confirmed once we contact you.",
+    "Colours may vary slightly between screens and the garment.",
+    "This is sample policy text. Replace it with wording reviewed for your business before launch.",
+  ] },
+};
+
+function PolicyPage({ route }: { route: string }) {
+  const p = POLICIES[route];
+  if (!p) return <NotFound />;
+  return (
+    <div className="wrap pt-10 lg:pt-16 max-w-[760px]">
+      <h1 className="font-display text-[clamp(2.6rem,6vw,4.4rem)] leading-none">{p.title}</h1>
+      <div className="mt-8 grid gap-5 text-[16px] leading-relaxed text-charcoal/80">{p.body.map((t, i) => <p key={i}>{t}</p>)}</div>
+    </div>
+  );
+}
+
+function NotFound() {
+  return (
+    <div className="wrap py-28 text-center">
+      <p className="eyebrow">404</p>
+      <h1 className="font-display text-[clamp(2.6rem,6vw,4.4rem)] leading-none mt-3">This page has moved.</h1>
+      <a href="#home" className="btn btn-dark mt-8">Back to home</a>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------
+//  18. APP
+// ---------------------------------------------------------------------
+function Router() {
+  const { route } = useStore();
+  if (route === "home") return <HomePage />;
+  if (route === "shop" || route.startsWith("shop-") || route === "new-arrivals" || route === "bestsellers" || route === "office-essentials") return <ShopPage route={route} />;
+  if (route.startsWith("product-")) return <ProductPage id={route.slice(8)} />;
+  if (route.startsWith("look-")) return <LookPage id={route.slice(5)} />;
+  if (route === "collections") return <CollectionsPage />;
+  if (route === "about") return <AboutPage />;
+  if (route === "checkout") return <CheckoutPage />;
+  if (route === "order-confirmed") return <ConfirmationPage />;
+  if (route === "wishlist") return <WishlistPage />;
+  if (route === "contact") return <ContactPage />;
+  if (route.startsWith("policy-")) return <PolicyPage route={route} />;
+  return <NotFound />;
+}
+
+function pageKey(route: string) {
+  if (route === "shop" || route.startsWith("shop-") || route === "new-arrivals" || route === "bestsellers" || route === "office-essentials") return "shop";
+  return route;
+}
+
+function App() {
+  const s = useStore();
+  useEffect(() => { document.title = CONFIG.brand.name; }, []);
+  return (
+    <div>
+      <Header />
+      <main key={pageKey(s.route)} className="page min-h-[60vh] pb-4"><Router /></main>
+      <Footer />
+      <CartDrawer />
+      <MobileMenu />
+      <SearchOverlay />
+      <QuickView />
+      <SizeGuide />
+      <AccountModal />
+      <Toast />
+    </div>
+  );
+}
+
+const rootEl = document.getElementById("root")!;
+ReactDOM.createRoot(rootEl).render(<StoreProvider><App /></StoreProvider>);
+
+</script>
+
+<script>
+(function () {
+  var root = document.getElementById('root');
+  function fail(e) {
+    root.innerHTML = '<pre style="padding:24px;white-space:pre-wrap;font:13px/1.5 monospace;color:#292925">The store could not start.\n' + String((e && e.message) || e) + '</pre>';
+  }
+  window.addEventListener('error', function (ev) {
+    if (root.firstChild && root.firstChild.className === 'splash') fail(ev.error || ev.message);
+  });
+  try {
+    if (!window.React || !window.ReactDOM) throw new Error('React did not load. Check your connection and reload.');
+    if (!window.Babel) throw new Error('The compiler did not load. Check your connection and reload.');
+    var src = document.getElementById('app-src').textContent;
+    var out = Babel.transform(src, {
+      filename: 'app.tsx',
+      presets: [['typescript', { isTSX: true, allExtensions: true }], 'react']
+    }).code;
+    var s = document.createElement('script');
+    s.textContent = '(function(){\n' + out + '\n})();';
+    document.body.appendChild(s);
+  } catch (e) { fail(e); }
+})();
+</script>
+
+</body></html>
